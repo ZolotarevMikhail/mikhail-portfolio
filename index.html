@@ -6,14 +6,24 @@
 <title>Михаил · ИИ-фриланс для маркетплейсов: дашборды, боты, контент</title>
 <meta name="description" content="Селлер Wildberries/Ozon. Делаю продающий контент, дашборды продаж, чат-ботов и лендинги для маркетплейсов. Примеры работ, сроки 1–7 дней.">
 <meta name="author" content="Михаил">
+<meta name="theme-color" content="#0a7d6b">
+<link rel="canonical" href="https://zolmy.ru/">
 <!-- Open Graph: красивая карточка при отправке ссылки в Telegram/ВК -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Михаил · ИИ-фриланс">
 <meta property="og:title" content="Михаил · ИИ-фриланс для маркетплейсов">
 <meta property="og:description" content="Продающий контент, дашборды, чат-боты и лендинги для WB/Ozon. Опыт селлера, примеры работ.">
-<meta property="og:image" content="shots/dashboard.png">
+<meta property="og:image" content="https://zolmy.ru/IMG_0630.jpeg">
+<meta property="og:url" content="https://zolmy.ru/">
 <meta property="og:locale" content="ru_RU">
+<!-- Twitter / Telegram preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Михаил · ИИ-фриланс для маркетплейсов">
+<meta name="twitter:description" content="Продающий контент, дашборды, чат-боты и лендинги для WB/Ozon.">
+<meta name="twitter:image" content="https://zolmy.ru/IMG_0630.jpeg">
 <!-- фавикон — иконка во вкладке браузера -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a7d6b'/><text x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>М</text></svg>">
+<link rel="apple-touch-icon" href="IMG_0630.jpeg">
 <style>
 :root{
   --bg:#ffffff;--bg-soft:#f6f7f9;--card:#ffffff;--border:#e6e8ec;
@@ -47,6 +57,9 @@ header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--b
 .brand small{color:var(--muted);font-weight:500;font-size:13px}
 .theme-btn{background:var(--bg-soft);border:1px solid var(--border);color:var(--text);border-radius:10px;padding:8px 12px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px}
 .theme-btn:hover{border-color:var(--accent)}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-link{font-size:13px;font-weight:600;color:var(--text-soft);text-decoration:none;padding:7px 12px;border-radius:10px;transition:color .15s,background .15s}
+.nav-link:hover{color:var(--text);background:var(--bg-soft)}
 
 /* hero */
 .hero{padding:64px 0 40px}
@@ -109,6 +122,7 @@ section{padding:48px 0}
 .case{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:0;margin-bottom:24px;overflow:hidden;box-shadow:var(--shadow)}
 .case.hidden{display:none}
 .case-img{width:100%;display:block;border-bottom:1px solid var(--border);background:var(--bg-soft)}
+.case-img.chat{width:100%;max-width:440px;margin:20px auto 0;border:1px solid var(--border);border-radius:12px;border-bottom:1px solid var(--border)}
 .case-cap{font-size:12px;color:var(--muted);padding:10px 24px 0;text-align:center}
 .case-head{padding:24px 24px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
 .case-num{font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.05em}
@@ -141,6 +155,8 @@ a.contact-link svg{width:18px;height:18px}
 .contact-submit{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:12px 20px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;transition:transform .12s,box-shadow .12s;width:100%}
 .contact-submit:hover{transform:translateY(-1px);box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 35%,transparent)}
 .contact-form-note{margin:10px 0 0;font-size:13px;color:var(--text-soft)}
+.contact-form-note.ok{color:#2ea043;font-weight:600}
+.contact-form-note.err{color:#d1242f;font-weight:600}
 @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:13px}
@@ -155,6 +171,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <header class="nav">
   <div class="wrap nav-in">
     <div class="brand"><span class="dot"></span>Михаил<small>· ИИ-фриланс</small></div>
+    <nav class="nav-links" aria-label="Разделы портфолио">
+    </nav>
     <button class="theme-btn" onclick="toggleTheme()" aria-label="Переключить тему">
       <span id="themeIcon">🌙</span><span id="themeText">Тёмная</span>
     </button>
@@ -174,12 +192,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Срок 1–7 дней</span>
         </div>
         <div class="cta-row fade">
-          <a class="btn btn-primary" href="#cases">Смотреть работы</a>
-          <a class="btn btn-ghost" href="#contact">Связаться</a>
         </div>
       </div>
       <div class="hero-photo fade">
-        <img src="IMG_0630.jpeg" alt="Михаил — ИИ-фрилансер, селлер WB/Ozon" loading="lazy">
+        <img src="IMG_0630.jpeg" alt="Михаил — ИИ-фрилансер, селлер WB/Ozon" fetchpriority="high">
       </div>
     </div>
   </section>
@@ -202,12 +218,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <section id="cases">
     <div class="sec-head fade">
       <h2>Работы</h2>
-      <p>Учебные и демонстрационные проекты — каждый можно посмотреть вживую или открыть код. Нажми на тему выше, чтобы отфильтровать.</p>
+      <p>Демонстрационные проекты и работы из практики — каждый можно посмотреть вживую или открыть код. Нажми на тему выше, чтобы отфильтровать.</p>
     </div>
 
     <div class="filter-bar fade">
       <span class="lbl">Тема:</span>
-      <button class="fbtn active" data-theme="all" onclick="filterWorks('all',this)">Все работы</button>
       <button class="fbtn" data-theme="cards" onclick="filterWorks('cards',this)">Карточки и SEO</button>
       <button class="fbtn" data-theme="posts" onclick="filterWorks('posts',this)">Посты</button>
       <button class="fbtn" data-theme="landing" onclick="filterWorks('landing',this)">Лендинги</button>
@@ -324,6 +339,100 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       </div>
     </article>
 
+    <!-- КЕЙС 7 -->
+    <article class="case fade hidden" data-theme="dashboards">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 07 · АНАЛИТИКА</div>
+          <h3>Дашборд продаж Wildberries</h3>
+        </div>
+        <div class="tags"><span>HTML/CSS/JS</span><span>WB API</span><span>Без CDN</span><span>Свет/тьма</span></div>
+      </div>
+      <img class="case-img" src="shots/dashboard-wb-dark.png" alt="Дашборд продаж Wildberries: KPI-карточки, графики, прибыль по товарам, остатки — тёмная тема" loading="lazy">
+      <div class="case-cap">Дашборд WB — тёмная тема. Та же версия поддерживает светлую. Скриншот откроется на полный экран по клику.</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Селлер спортивных товаров на WB <b>каждое утро за минуту</b> хочет видеть реальную картину: выручку, прибыль после комиссий и рекламы, что заказывают, что заканчивается на складе. Сейчас цифры разбросаны по вкладкам личного кабинета WB — сводить вручную некогда.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val"><b>6 KPI-плиток</b>: выручка (с возвратами), заказы, прибыль, ROI рекламы, остатки, возвраты. <b>4 графика</b>: динамика выручки/заказов/прибыли по периоду, расходы и отдача на рекламу, прибыль по товарам (рейтинг «кто зарабатывает — кто тянет вниз»), остатки по товарам. <b>Фильтры</b>: период (год/месяц/неделя/день + произвольные даты), тип товара. Одна кнопка <b>«Обновить»</b> — тянет свежие данные из API WB по требованию. <b>Экспорт в CSV</b> текущего среза. <b>Светлая и тёмная тема</b>. Авто-резюме по периоду. Таблица товаров с сортировкой.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Один HTML-файл, открывается двойным кликом. <b>Работает офлайн</b>, без CDN и внешних библиотек — графики на чистом SVG/JS. <b>Демо-данные</b> внутри файла: дашборд сразу показывает графики и KPI без настройки — можно оценить интерфейс. WB-токен хранится только в local браузера клиента, никогда не уходит в код. Готов к подключению реального кабинета селлера (режим «лайв-браузер»).</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), HTML/CSS/JS, API Wildberries (продажи, заказы, остатки, комиссии, реклама), SVG-графики. Архитектура применима и к Ozon — для другой структуры комиссий и остатков.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="../отчеты/wb-dashboard-misha/index.html" target="_blank" rel="noopener">Открыть демо</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 8 -->
+    <article class="case fade hidden" data-theme="dashboards">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 08 · АНАЛИТИКА</div>
+          <h3>Seller Price Radar — цены конкурентов на Wildberries</h3>
+        </div>
+        <div class="tags"><span>HTML/CSS/JS</span><span>Адаптив</span><span>Демо онлайн</span></div>
+      </div>
+      <img class="case-img" src="shots/price-radar.png" alt="Дашборд Seller Price Radar: пары «мой товар × конкурент», Δ% и авто-выводы" loading="lazy">
+      <div class="case-cap">Сравнение цен парами «мой товар × конкурент» — Δ% и автоматические выводы. Живое демо — по кнопке ниже.</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Селлеру WB нужно видеть, где его цена ниже конкурента, а где конкурент обходит его — по парам товаров-аналогов, а не «в среднем по полке».</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Дашборд одним HTML-файлом: <b>сопоставление пар</b> с цветовой маркировкой (🟢 мы дешевле / 🔴 конкурент дешевле), живые фильтры (товар, конкурент, порог %), <b>авто-выводы</b> по критичным расхождениям, загрузка среза JSON/CSV, средняя по конкурентам. Без библиотек и CDN, адаптив от 400 px.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Открывается двойным кликом и сразу показывает демо-данные. <b>Демо доступно онлайн</b> — можно показать заказчику без установки.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), чистый JavaScript, SVG, GitHub Pages для демо.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://zolotarevmikhail.github.io/seller-price-radar-mvp/" target="_blank" rel="noopener">Открыть демо</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 9 -->
+    <article class="case fade hidden" data-theme="bots">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 09 · ЧАТ-БОТЫ</div>
+          <h3>Бот-розыгрыш для сообществ ВКонтакте</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>VK API</span><span>SQLite</span><span>Работа 24/7</span></div>
+      </div>
+      <!-- СКРИНЫ: когда файлы будут добавлены в Freelancer/Chatbot/vk-giveaway-bot/скрины/,
+           заменить плейсхолдер ниже на:
+           <img class="case-img" src="../Chatbot/vk-giveaway-bot/скрины/ИМЯ-ФАЙЛА.png" alt="..." loading="lazy">
+           <div class="case-cap">Подпись к скриншоту.</div>
+           (Для публикации на zolmy.ru скрин лучше скопировать в папку shots/ рядом с index.html
+            и указать src="shots/ИМЯ-ФАЙЛА.png") -->
+      <img class="case-img chat" src="shots/uchastie.png" alt="Диалог с ботом-розыгрышем ВК: приветствие, кнопка «Участвовать», подтверждение участия и защита от повторов" loading="lazy">
+      <div class="case-cap">Участие по кнопке — повторно зарегистрироваться нельзя</div>
+      <img class="case-img chat" src="shots/admin.png" alt="Админ-команды бота: статус розыгрыша и выбор случайного победителя со ссылкой на профиль" loading="lazy">
+      <div class="case-cap">Админ-команды: статус розыгрыша и случайный победитель</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Бот-розыгрыш (giveaway) для сообществ ВКонтакте: участник нажимает <b>«Участвовать»</b> в сообщениях сообщества, бот проверяет подписки, а в конце честно выбирает победителя. Организатору не нужно вручную собирать участников и следить за честностью.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Участие по кнопке «Участвовать». <b>Проверка подписки сразу на несколько сообществ</b> — работает для совместных розыгрышей. <b>Защита от накруток</b>: один человек — одно участие, повторно пройти нельзя. Случайный выбор победителя <b>со ссылкой на профиль</b>. Дата окончания розыгрыша и сброс раунда <b>в один клик</b>. Все участники хранятся в базе данных (SQLite). Работа 24/7: при сбоях связи бот <b>сам переподключается</b>.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Рабочий MVP: собран и <b>проверен вживую на тестовом сообществе ВКонтакте</b>. <b>12 локальных тестов пройдены</b> до запуска. Организатор розыгрыша избавлен от ручного сбора участников, проверки подписок и споров о честности — победителя выбирает случай, а не рука.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, VK API (Long Poll), SQLite. Архитектура переносится на другие механики ботов для сообществ.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/vk-giveaway-bot" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 10 -->
+    <article class="case fade hidden" data-theme="bots">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 10 · ЧАТ-БОТЫ</div>
+          <h3>Реферальный бот-привратник для Telegram</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>Postback</span><span>SQLite</span><span>Автотесты</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Впускать в приватную Telegram-группу <b>только тех, кто выполнил условие</b> в партнёрской системе — автоматически, без ручной проверки. Проект из практики: собственный прототип, который можно подключить к любой партнёрке или продаже доступов.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Пользователь заходит по ссылке с <b>уникальным кодом</b> — бот запоминает пару «код ↔ пользователь». Партнёрская система присылает <b>postback</b> (авто-уведомление через встроенный веб-сервер бота) — бот выдаёт <b>одноразовую ссылку-приглашение</b> в группу. <b>Защита от повторной выдачи</b>: каждая выдача фиксируется в базе, дубль не пройдёт. Ручная выдача админом командой <b>/grant</b>, выбор группы командой <b>/setgroup</b> прямо в чате — без правки конфигов. Опциональный секрет в postback — защита от подделки заявок. Токен и настройки — в отдельном файле, в коде их нет. Логика проверена <b>9 автотестами</b>.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Рабочий бот-привратник: весь цикл «ссылка → оплата/действие → доступ в группу» идёт без человека. Хранение в одном файле базы — никаких внешних сервисов, развёртывается на недорогом сервере. Готов как <b>шаблон под заказ клиента</b>: под любую партнёрскую систему с postback.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, pyTelegramBotAPI, SQLite, встроенный HTTP-сервер.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/telegram-referal-bot" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
   </section>
 
   <section id="contact">
@@ -351,45 +460,45 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
       <!-- Telegram -->
       <div class="contact-form" id="formTelegram">
-        <p class="contact-form-title">Напишите сообщение — откроется Telegram с готовым текстом, выберите кому отправить.</p>
+        <p class="contact-form-title">Напишите сообщение — отвечу в Telegram.</p>
         <form class="contact-form-row" onsubmit="return submitTelegram(event)">
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
           <textarea id="tgMessage" rows="4" placeholder="Здравствуйте! Хочу обсудить задачу..." class="contact-input contact-textarea" required></textarea>
-          <button type="submit" class="contact-submit">Открыть Telegram</button>
+          <button type="submit" class="contact-submit">Отправить</button>
         </form>
-        <p class="contact-form-note">Telegram откроется сам, текст уже будет в сообщении. Получателя выберете из своих контактов.</p>
       </div>
 
       <!-- Email -->
       <div class="contact-form" id="formEmail">
         <p class="contact-form-title">Оставьте ваш email — отвечу письмом.</p>
         <form class="contact-form-row" onsubmit="return submitEmail(event)">
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
           <input type="email" id="mailFrom" required placeholder="ваш@email.com"
                  autocomplete="email" class="contact-input">
           <textarea id="mailTask" rows="3" placeholder="Коротко о задаче (необязательно)" class="contact-input contact-textarea"></textarea>
-          <button type="submit" class="contact-submit">Открыть почту</button>
+          <button type="submit" class="contact-submit">Отправить</button>
         </form>
-        <p class="contact-form-note">Откроется ваш почтовый клиент с готовым письмом. В поле «от кого» будет ваш адрес.</p>
       </div>
 
       <!-- ВКонтакте -->
       <div class="contact-form" id="formVk">
-        <p class="contact-form-title">Напишите сообщение — откроется ВКонтакте с готовым текстом, выберите кому отправить.</p>
+        <p class="contact-form-title">Напишите сообщение — отвечу в ВКонтакте.</p>
         <form class="contact-form-row" onsubmit="return submitVk(event)">
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
           <textarea id="vkMessage" rows="4" placeholder="Здравствуйте! Хочу обсудить задачу..." class="contact-input contact-textarea" required></textarea>
-          <button type="submit" class="contact-submit">Открыть ВКонтакте</button>
+          <button type="submit" class="contact-submit">Отправить</button>
         </form>
-        <p class="contact-form-note">ВКонтакте откроется сам, текст уже будет в сообщении. Получателя выберете из своих контактов.</p>
       </div>
 
       <!-- Звонок -->
       <div class="contact-form" id="formCall">
         <p class="contact-form-title">Оставьте номер — перезвоню в течение часа.</p>
         <form class="contact-form-row" onsubmit="return submitCall(event)">
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
           <input type="tel" id="callPhone" required placeholder="+7 (___) ___-__-__"
                  pattern="[\+\d\s\-\(\)]{6,}" autocomplete="tel" class="contact-input">
-          <button type="submit" class="contact-submit">Открыть почту</button>
+          <button type="submit" class="contact-submit">Отправить</button>
         </form>
-        <p class="contact-form-note">Откроется ваш почтовый клиент с готовым письмом. В поле «от кого» будет ваш адрес.</p>
       </div>
     </div>
   </section>
@@ -405,23 +514,68 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <script>
 // Фильтрация работ по теме. theme — код темы ('all' чтобы показать все).
 // src — элемент-кнопка, на которую нажали (для подсветки).
+// Универсальный toggle-принцип: один клик — открыли все кейсы темы, второй — свернули лишние.
+// При первом открытии страницы видны 6 образцовых кейсов (по одному на тему).
+// При нажатии на тему — открываются ВСЕ её кейсы.
+// При повторном нажатии — снова видны только 6 образцовых (для «Дашборды» это КЕЙС 01, не КЕЙС 07).
+// theme: 'all' | 'cards' | 'posts' | 'landing' | 'dashboards' | 'bots' | 'seo'
 function filterWorks(theme,src){
   const cases=document.querySelectorAll('#cases .case');
-  let shown=0;
-  cases.forEach(c=>{
-    const match=(theme==='all'||c.getAttribute('data-theme')===theme);
-    c.classList.toggle('hidden',!match);
-    if(match)shown++;
-  });
-  document.getElementById('filterEmpty').classList.toggle('show',shown===0);
-  // подсветка активной кнопки в панели фильтра
-  document.querySelectorAll('.filter-bar .fbtn').forEach(b=>b.classList.toggle('active',b.getAttribute('data-theme')===theme));
-  // подсветка активной карточки в разделе «Что делаю»
-  document.querySelectorAll('.svc').forEach(s=>s.classList.toggle('active',s.getAttribute('data-theme')===theme));
-  // прокрутка к блоку работ, если нажали карточку услуги
+
+  // Какие кейсы должны быть видны «по умолчанию» для каждой темы.
+  // Номер кейса сравнивается по началу строки (startsWith), потому что в DOM хранится
+  // полный текст: «КЕЙС 01 · АНАЛИТИКА», а нам нужно только «КЕЙС 01».
+  const defaults={
+    dashboards: ['КЕЙС 01'],
+    bots:       ['КЕЙС 02'],
+    landing:    ['КЕЙС 03'],
+    seo:        ['КЕЙС 04'],
+    posts:      ['КЕЙС 05'],
+    cards:      ['КЕЙС 06'],
+  };
+  // Сводный «стартовый набор» — все образцовые сразу видны.
+  const allDefaults=Object.values(defaults).flat();
+
+  // Активна ли сейчас эта же тема (т.е. видны ВСЕ её кейсы, а не только образцовый)?
+  const visibleCases=Array.from(cases).filter(c=>!c.classList.contains('hidden'));
+  const themes=new Set(visibleCases.map(c=>c.getAttribute('data-theme')));
+  const activeTheme=(themes.size===1 && [...themes][0]===theme)?theme:null;
+
+  if(activeTheme===theme){
+    // Повторный клик — свернуть лишние, оставить только образцовые.
+    // Шаг 1: у видимых кейсов активной темы убираем те, что НЕ в дефолтах.
+    visibleCases.forEach(c=>{
+      const num=c.querySelector('.case-num')?.textContent.trim()||'';
+      const isDefault=allDefaults.some(d=>num.startsWith(d));
+      if(!isDefault)c.classList.add('hidden');
+    });
+    // Шаг 2: возвращаем видимость образцовым кейсам других тем, которые могли
+    // быть скрыты первым кликом (когда фильтр раскрыл только активную тему).
+    cases.forEach(c=>{
+      const num=c.querySelector('.case-num')?.textContent.trim()||'';
+      const isDefault=allDefaults.some(d=>num.startsWith(d));
+      if(isDefault)c.classList.remove('hidden');
+    });
+  } else {
+    // Первый клик (или смена темы) — открыть все кейсы выбранной темы.
+    cases.forEach(c=>{
+      const match=(theme==='all'||c.getAttribute('data-theme')===theme);
+      c.classList.toggle('hidden',!match);
+    });
+  }
+
+  // Подсветка активной кнопки в панели фильтра.
+  document.querySelectorAll('.filter-bar .fbtn').forEach(b=>b.classList.toggle('active',b.getAttribute('data-theme')===theme && activeTheme!==theme));
+  // Подсветка активной карточки в разделе «Что делаю».
+  document.querySelectorAll('.svc').forEach(s=>s.classList.toggle('active',s.getAttribute('data-theme')===theme && activeTheme!==theme));
+  // Прокрутка к блоку работ, если нажали карточку услуги.
   if(src&&src.classList.contains('svc')){
     document.getElementById('cases').scrollIntoView({behavior:'smooth',block:'start'});
   }
+}
+// Алиас для ссылки «Дашборды» в шапке — использует ту же toggle-логику.
+function showDashboardsOnly(){
+  filterWorks('dashboards',null);
 }
 // Переключение контактных форм. kind — 'tg' | 'mail' | 'call' | 'vk'.
 // Одновременно открыта только одна форма — другие закрываются.
@@ -440,59 +594,68 @@ function toggleContact(kind){
   }
   return false;
 }
-// Telegram: открывает приложение/веб-версию Telegram с готовым текстом сообщения.
-// Получателя посетитель выбирает сам из своих контактов — никаких привязок к @username.
+// Универсальная отправка формы через PHP → Telegram
+function sendToTelegram(form, payload, statusEl){
+  const btn = form.querySelector('button[type="submit"]');
+  const orig = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Отправляю...';
+  if(statusEl){ statusEl.textContent=''; statusEl.className='contact-form-note'; }
+
+  fetch('send.php', {
+    method: 'POST',
+    headers: {'Content-Type':'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(payload).toString()
+  })
+  .then(r=>r.json())
+  .then(data=>{
+    if(data.ok){
+      form.reset();
+      if(statusEl){ statusEl.textContent='✓ Отправлено! Я отвечу в Telegram.'; statusEl.className='contact-form-note ok'; }
+    } else {
+      if(statusEl){ statusEl.textContent='✗ Не отправилось. Напишите мне — ссылка в шапке страницы.'; statusEl.className='contact-form-note err'; }
+    }
+  })
+  .catch(()=>{
+    if(statusEl){ statusEl.textContent='✗ Ошибка сети. Напишите мне — ссылка в шапке страницы.'; statusEl.className='contact-form-note err'; }
+  })
+  .finally(()=>{
+    btn.disabled = false;
+    btn.textContent = orig;
+  });
+  return false;
+}
 function submitTelegram(e){
   e.preventDefault();
+  const form=e.target;
   const text=document.getElementById('tgMessage').value.trim();
   if(!text)return false;
-  const url='tg://msg?text='+encodeURIComponent(text);
-  window.location.href=url;
-  setTimeout(()=>{
-    window.open('https://t.me/share/url?url='+encodeURIComponent(' ')+'&text='+encodeURIComponent(text),'_blank','noopener');
-  },300);
+  sendToTelegram(form, {type:'tg', message:text}, form.querySelector('.contact-form-note'));
   return false;
 }
-// ВКонтакте: открывает окно «Поделиться» с готовым текстом. Получателя выбирает посетитель.
 function submitVk(e){
   e.preventDefault();
+  const form=e.target;
   const text=document.getElementById('vkMessage').value.trim();
   if(!text)return false;
-  // VK не имеет официального share URL с произвольным текстом. Используем схему
-  // для приложения (если установлено) + фолбэк на сообщество/группу через share-диалог.
-  const appUrl='vk://share?text='+encodeURIComponent(text);
-  window.location.href=appUrl;
-  setTimeout(()=>{
-    // Фолбэк для веб-версии: открываем страницу отправки сообщения в ВК
-    // (посетитель сам выберет получателя из списка диалогов)
-    window.open('https://vk.com/im?sel=&message='+encodeURIComponent(text),'_blank','noopener');
-  },300);
+  sendToTelegram(form, {type:'vk', message:text}, form.querySelector('.contact-form-note'));
   return false;
 }
-// Email: посетитель вводит СВОЙ email и (опционально) задачу —
-// открываем его почтовый клиент. «Кому» — адрес Михаила,
-// «От кого» — тот ящик, что активен у посетителя в его клиенте.
 function submitEmail(e){
   e.preventDefault();
+  const form=e.target;
   const from=document.getElementById('mailFrom').value.trim();
   const task=document.getElementById('mailTask').value.trim();
   if(!from)return false;
-  const subject='Запрос с портфолио';
-  let body='Здравствуйте!\nПишу с вашего портфолио.\nМой email для ответа: '+from+'\n';
-  if(task){body+='\nКоротко о задаче:\n'+task+'\n';}
-  const url='mailto:zolotarevm@me.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-  window.location.href=url;
+  sendToTelegram(form, {type:'mail', email:from, task:task}, form.querySelector('.contact-form-note'));
   return false;
 }
-// Звонок: посетитель вводит СВОЙ номер — открываем его почтовый клиент с письмом Михаилу.
 function submitCall(e){
   e.preventDefault();
+  const form=e.target;
   const phone=document.getElementById('callPhone').value.trim();
   if(!phone)return false;
-  const subject='Заказ обратного звонка с портфолио';
-  const body='Здравствуйте!\nХочу заказать обратный звонок.\nМой телефон: '+phone+'\n\nУдобное время для звонка: __:__ – __:__\nКоротко о задаче: ';
-  const url='mailto:zolotarevm@me.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-  window.location.href=url;
+  sendToTelegram(form, {type:'call', phone:phone}, form.querySelector('.contact-form-note'));
   return false;
 }
 function toggleTheme(){
@@ -511,7 +674,4 @@ function toggleTheme(){
 })();
 </script>
 </body>
-</html><!-- force-rebuild -->
-<!-- rebuild воскресенье, 16 августа 2026 г. 12:13:37 (MSK) -->
-<!-- fresh 1786876735 -->
-<!-- final 1786881197 -->
+</html>
