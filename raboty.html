@@ -44,6 +44,7 @@
     <a class="brand" href="/"><span class="dot"></span>Михаил<small>· ИИ-фриланс</small></a>
     <nav class="nav-links" aria-label="Разделы сайта">
       <a class="nav-link active" href="raboty.html">Работы</a>
+      <a class="nav-link" href="vibecode-check.html">Проверка кода</a>
       <a class="nav-link" href="chatboty.html">Чат-боты</a>
       <a class="nav-link" href="dashboardy.html">Дашборды</a>
       <a class="nav-link" href="#contact">Контакты</a>
@@ -505,6 +506,8 @@
         </div>
         <div class="tags"><span>Повторы и таймауты</span><span>Атомарная запись</span><span>Стенд API</span></div>
       </div>
+      <img class="case-img" src="shots/vibecode-case2.png" alt="Стенд с одними и теми же ответами источника: до — крэш и стёртый CSV, после — повторы и файл обновлён, 74 строки" loading="lazy">
+      <div class="case-cap">Стенд с одними и теми же ответами источника: «до» — крэш и стёртый CSV, «после» — файл обновлён, 74 строки.</div>
       <div class="case-body">
         <div class="case-row"><div class="lbl">Задача</div><div class="val">Вайбкод-парсер цен конкурента умирал по ночам и оставлял пустой CSV.</div></div>
         <div class="case-row"><div class="lbl">Что нашёл</div><div class="val">Любая ошибка источника (429/500) рвала весь сбор, а <b>файл результата открывался на перезапись в начале</b> — утренний CSV пустой не потому, что «не собрали», а потому что собрали и стёрли. Запросы без таймаута и пауз: зависший источник подвешивал процесс.</div></div>
@@ -523,6 +526,8 @@
         </div>
         <div class="tags"><span>Скан истории гита</span><span>Перевыпуск ключей</span><span>.gitignore + .env.example</span></div>
       </div>
+      <img class="case-img" src="shots/vibecode-case3.png" alt="Скан репозитория за две минуты: ключи читаются из истории гита, после правки в логе нет ни одного значения" loading="lazy">
+      <div class="case-cap">Скан репозитория за две минуты: с первого коммита ключи в истории; после правки в логе — ни одного значения.</div>
       <div class="case-body">
         <div class="case-row"><div class="lbl">Задача</div><div class="val">Боты «висели мёртвые» — причина нашлась не в ботах.</div></div>
         <div class="case-row"><div class="lbl">Что нашёл</div><div class="val"><b>Токен бота и ключ магазина — в коде, в .env и в истории гита</b> открытого репозитория; бот печатал все ключи в лог при каждом старте. «Удалю .env и запушу заново» не работает: история гита хранит содержимое навсегда.</div></div>
