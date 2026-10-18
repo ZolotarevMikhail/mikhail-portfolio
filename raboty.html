@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Работы · Михаил — ИИ-автоматизация для бизнеса</title>
+<meta name="description" content="Все работы: чат-боты, дашборды продаж WB/Ozon, лендинги, SEO-аудиты, программы под ключ. Каждый проект — живое демо или открытый код.">
+<meta name="author" content="Михаил">
+<meta name="theme-color" content="#0a7d6b">
+<link rel="canonical" href="https://zolmy.ru/raboty.html">
+<link rel="stylesheet" href="style.css">
+<!-- Open Graph: красивая карточка при отправке ссылки в Telegram/ВК -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Михаил · ИИ-фриланс">
+<meta property="og:title" content="Работы · Михаил ИИ-фриланс">
+<meta property="og:description" content="30 лет в торговле и производстве, селлер WB/Ozon. Чат-боты, дашборды, автоматизация кабинетов, контент и лендинги. Примеры работ.">
+<meta property="og:image" content="https://zolmy.ru/IMG_0630.jpeg">
+<meta property="og:url" content="https://zolmy.ru/raboty.html">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Михаил · ИИ-автоматизация для бизнеса">
+<meta name="twitter:description" content="Чат-боты, дашборды, автоматизация кабинетов WB/Ozon, контент и лендинги. Примеры работ.">
+<meta name="twitter:image" content="https://zolmy.ru/IMG_0630.jpeg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a7d6b'/><text x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>М</text></svg>">
+<link rel="apple-touch-icon" href="IMG_0630.jpeg">
+<!-- Разметка для поисковиков и ИИ-помощников: кто здесь, что делает -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Михаил",
+  "jobTitle": "ИИ-специалист: автоматизация бизнеса",
+  "description": "30 лет в торговле и производстве, селлер WB/Ozon. Чат-боты, дашборды продаж, автоматизация кабинетов маркетплейсов, контент и лендинги.",
+  "url": "https://zolmy.ru/",
+  "knowsAbout": ["чат-боты", "дашборды продаж", "Wildberries API", "Ozon API", "автоматизация", "лендинги", "ИИ-контент"],
+  "sameAs": ["https://github.com/ZolotarevMikhail"]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/"><span class="dot"></span>Михаил<small>· ИИ-фриланс</small></a>
+    <nav class="nav-links" aria-label="Разделы сайта">
+      <a class="nav-link active" href="raboty.html">Работы</a>
+      <a class="nav-link" href="chatboty.html">Чат-боты</a>
+      <a class="nav-link" href="dashboardy.html">Дашборды</a>
+      <a class="nav-link" href="#contact">Контакты</a>
+    </nav>
+    <button class="theme-btn" onclick="toggleTheme()" aria-label="Переключить тему">
+      <span id="themeIcon">🌙</span><span id="themeText">Тёмная</span>
+    </button>
+  </div>
+</header>
+
+<div class="wrap">
+  <section id="cases">
+    <div class="sec-head fade">
+      <h2>Работы</h2>
+      <p>Демонстрационные проекты и работы из практики — каждый можно посмотреть вживую или открыть код. Нажми на тему выше, чтобы отфильтровать.</p>
+    </div>
+
+    <div class="filter-bar fade">
+      <span class="lbl">Тема:</span>
+      <button class="fbtn" data-theme="posts" onclick="filterWorks('posts',this)">Посты</button>
+      <button class="fbtn" data-theme="zavod" onclick="filterWorks('zavod',this)">Контент-завод</button>
+      <button class="fbtn" data-theme="landing" onclick="filterWorks('landing',this)">Лендинги</button>
+      <button class="fbtn" data-theme="dashboards" onclick="filterWorks('dashboards',this)">Дашборды</button>
+      <button class="fbtn" data-theme="wb" onclick="filterWorks('wb',this)">WB/Ozon</button>
+      <button class="fbtn" data-theme="bots" onclick="filterWorks('bots',this)">Чат-боты</button>
+      <button class="fbtn" data-theme="agents" onclick="filterWorks('agents',this)">AI-агенты</button>
+      <button class="fbtn" data-theme="strategy" onclick="filterWorks('strategy',this)">AI-стратегии</button>
+      <button class="fbtn" data-theme="seo" onclick="filterWorks('seo',this)">SEO-аудит</button>
+      <button class="fbtn" data-theme="tools" onclick="filterWorks('tools',this)">Программы</button>
+      <button class="fbtn" data-theme="vcheck" onclick="filterWorks('vcheck',this)">Проверка кода</button>
+    </div>
+
+    <div class="filter-empty" id="filterEmpty">Пока нет работ в этой теме. Загляните позже — раздел наполняется.</div>
+
+    <!-- КЕЙС 1 -->
+    <article class="case fade" data-theme="dashboards">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 01 · АНАЛИТИКА</div>
+          <h3>Интерактивный дашборд продаж</h3>
+        </div>
+        <div class="tags"><span>HTML/CSS/JS</span><span>Без библиотек</span><span>CSV-импорт</span></div>
+      </div>
+      <img class="case-img" src="shots/dashboard.webp" alt="Скриншот дашборда продаж: KPI-карточки, графики, фильтры" loading="lazy">
+      <div class="case-cap">Так выглядит дашборд вживую — один файл, открывается в браузере.</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Показать продажи компании на одном экране: выручка, заявки, конверсия, средний чек — с фильтрами по периоду, каналу, продукту, менеджеру, региону.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val"><b>8 KPI-карточек</b>, 6 фильтров, 5 графиков (динамика, каналы, менеджеры, продукты, регионы), таблица с сортировкой, авто-резюме. <b>Загрузка и экспорт CSV.</b> Один файл — работает без интернета и внешних библиотек.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Руководитель видит все ключевые цифры на одном экране, фильтрует под задачу и выгружает срез. Готов к подключению реальных данных клиента.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude, чистый JavaScript, SVG-графики. Применимо к аналитике продаж WB/Ozon.</div></div>
+      </div>
+    </article>
+
+    <!-- КЕЙС 2 -->
+    <article class="case fade" data-theme="bots">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 02 · ЧАТ-БОТЫ</div>
+          <h3>Чат-бот поддержки для ВКонтакте</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>GigaChat</span><span>SQLite</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Бот для отдела продаж в ВК: отвечать на типовые вопросы клиентов, собирать статистику, сложные — переводить на менеджера.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Ответы на <b>5 тем</b> (продукты, цены, скидки, доставка, статус заказа) по базе знаний. Нейросеть — для нестандартных, с удержанием от выдумок: <b>не придумывает цены и сроки</b>, переводит на менеджера. Статистика в SQLite, автотесты.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Типовые вопросы закрываются за миллисекунды, сложные — через нейросеть до 3 секунд. Менеджер разгружен от рутины.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, VK Long Poll, GigaChat. Архитектура переносится на Telegram.</div></div>
+      </div>
+    </article>
+
+    <!-- КЕЙС 3 -->
+    <article class="case fade" data-theme="landing">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 03 · ЛЕНДИНГИ</div>
+          <h3>Сайт-визитка и MVP-лендинг</h3>
+        </div>
+        <div class="tags"><span>HTML/CSS/JS</span><span>Адаптив</span><span>Анимации</span></div>
+      </div>
+      <img class="case-img" src="shots/landing.webp" alt="Скриншот лендинга: Hero, услуги, форма заявки" loading="lazy">
+      <div class="case-cap">Лендинг под оффер — открывается на телефоне и компьютере.</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Одностраничник под оффер: Hero, Услуги, Преимущества, Заявка, Контакты. Должен работать на телефоне и быть готовым к публикации.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Собрал спецификацию (оффер, аудитория, стиль, CTA) и <b>готовый index.html</b>: 5 секций, плавные появления при скролле, рабочее мобильное меню, форма с подтверждением. Один файл, без внешних зависимостей.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Сайт открывается двойным кликом, адаптив под телефон, готов к размещению на любом хостинге. Пометки TODO — куда подставить контакты клиента.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude, семантический HTML, CSS Grid/Flex, нативный JS.</div></div>
+      </div>
+    </article>
+
+    <!-- КЕЙС 4 -->
+    <article class="case fade" data-theme="seo">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 04 · SEO</div>
+          <h3>SEO-аудит реального сайта</h3>
+        </div>
+        <div class="tags"><span>Playwright</span><span>Скриншоты</span><span>Чек-лист</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Разобрать сайт: что мешает поиску и конверсии, что улучшить — понятным языком, с доказательствами.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Открыл сайт через автоматизацию, сделал <b>скриншоты desktop и mobile</b>, проверил заголовки (title, H1), мета-описания, alt картинок, мобильную версию, ошибки консоли. Собрал отчёт в Markdown: <b>проблема → почему важно → что сделать</b>.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Документ, который можно читать без технических знаний, с чётким чек-листом правок для разработчика или владельца сайта.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude, Playwright (снимок сайта и консоль), Markdown.</div></div>
+      </div>
+    </article>
+
+    <!-- КЕЙС 5 -->
+    <article class="case fade" data-theme="posts">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 05 · КОНТЕНТ</div>
+          <h3>Посты для соцсетей из источника</h3>
+        </div>
+        <div class="tags"><span>Telegram</span><span>ВК</span><span>Instagram</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Превратить статью/новость в короткие посты для трёх соцсетей — с пользой для аудитории, без прямой рекламы.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Из источника собрал <b>три поста</b> (Telegram, ВК, Instagram) в едином тоне, с призывом к действию и хештегами под площадку. Формат JSON + Markdown — можно копировать и вставлять. Промпт для генерации картинки.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Готовая серия постов под формат каждой соцсети, без выдуманных фактов — спорные места отмечены для уточнения.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude, рабочий процесс для контента из любого источника.</div></div>
+      </div>
+    </article>
+
+    <!-- КЕЙС 6 -->
+    <article class="case fade hidden" data-theme="wb">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 06 · WB/OZON</div>
+          <h3>Продающее SEO-описание карточки Wildberries</h3>
+        </div>
+        <div class="tags"><span>WB</span><span>SEO-текст</span><span>1000–1500 символов</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Продающее SEO-описание <b>1000–1500 символов</b> для массажного валика-роллера «СпинаОк». ЦА — офисные работники 25–45 лет с болью в спине. Нужно вписать 3 ключа: «массажёр для спины», «валик массажный», «роллер для спины».</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Черновик через Claude → <b>ручная редактура</b> под бренд и ЦА: убрал «ИИ-шаблонщину», добавил блок «как пользоваться за 5 минут». Три ключа вписаны <b>естественно, по одному разу, в разных падежах</b>. Характеристики взяты из данных клиента (TPE, 33×14 см, 750 г) — без выдуманных фактов.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val"><b>1014 символов</b> — попадает в ТЗ 1000–1500. Все 3 ключа вписаны, текст читается как написанный человеком. Готов к вставке в карточку WB.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude + ручная редактура. Процесс применим к карточкам WB/Ozon в любой нише.</div></div>
+      </div>
+    </article>
+
+    <!-- КЕЙС 7 -->
+    <article class="case fade" data-theme="dashboards" id="case-wb">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 07 · АНАЛИТИКА</div>
+          <h3>Дашборд продаж Wildberries</h3>
+        </div>
+        <div class="tags"><span>HTML/CSS/JS</span><span>WB API</span><span>Без CDN</span><span>Свет/тьма</span></div>
+      </div>
+      <img class="case-img" src="shots/dashboard-wb-dark.webp" alt="Дашборд продаж Wildberries: KPI-карточки, графики, прибыль по товарам, остатки — тёмная тема" loading="lazy">
+      <div class="case-cap">Дашборд WB — тёмная тема. Та же версия поддерживает светлую. Скриншот откроется на полный экран по клику.</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Селлер спортивных товаров на WB <b>каждое утро за минуту</b> хочет видеть реальную картину: выручку, прибыль после комиссий и рекламы, что заказывают, что заканчивается на складе. Сейчас цифры разбросаны по вкладкам личного кабинета WB — сводить вручную некогда.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val"><b>6 KPI-плиток</b>: выручка (с возвратами), заказы, прибыль, ROI рекламы, остатки, возвраты. <b>4 графика</b>: динамика выручки/заказов/прибыли по периоду, расходы и отдача на рекламу, прибыль по товарам (рейтинг «кто зарабатывает — кто тянет вниз»), остатки по товарам. <b>Фильтры</b>: период (год/месяц/неделя/день + произвольные даты), тип товара. Одна кнопка <b>«Обновить»</b> — тянет свежие данные из API WB по требованию. <b>Экспорт в CSV</b> текущего среза. <b>Светлая и тёмная тема</b>. Авто-резюме по периоду. Таблица товаров с сортировкой.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Один HTML-файл, открывается двойным кликом. <b>Работает офлайн</b>, без CDN и внешних библиотек — графики на чистом SVG/JS. <b>Демо-данные</b> внутри файла: дашборд сразу показывает графики и KPI без настройки — можно оценить интерфейс. WB-токен хранится только в local браузера клиента, никогда не уходит в код. Готов к подключению реального кабинета селлера (режим «лайв-браузер»).</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), HTML/CSS/JS, API Wildberries (продажи, заказы, остатки, комиссии, реклама), SVG-графики. Архитектура применима и к Ozon — для другой структуры комиссий и остатков.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="/wb-dashboard.html" target="_blank" rel="noopener">Открыть демо</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 8 -->
+    <article class="case fade hidden" data-theme="wb">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 08 · WB/OZON</div>
+          <h3>Seller Price Radar — цены конкурентов на Wildberries</h3>
+        </div>
+        <div class="tags"><span>HTML/CSS/JS</span><span>Адаптив</span><span>Демо онлайн</span></div>
+      </div>
+      <img class="case-img" src="shots/price-radar.webp" alt="Дашборд Seller Price Radar: пары «мой товар × конкурент», Δ% и авто-выводы" loading="lazy">
+      <div class="case-cap">Сравнение цен парами «мой товар × конкурент» — Δ% и автоматические выводы. Живое демо — по кнопке ниже.</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Селлеру WB нужно видеть, где его цена ниже конкурента, а где конкурент обходит его — по парам товаров-аналогов, а не «в среднем по полке».</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Дашборд одним HTML-файлом: <b>сопоставление пар</b> с цветовой маркировкой (🟢 мы дешевле / 🔴 конкурент дешевле), живые фильтры (товар, конкурент, порог %), <b>авто-выводы</b> по критичным расхождениям, загрузка среза JSON/CSV, средняя по конкурентам. Без библиотек и CDN, адаптив от 400 px.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Открывается двойным кликом и сразу показывает демо-данные. <b>Демо доступно онлайн</b> — можно показать заказчику без установки.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), чистый JavaScript, SVG, GitHub Pages для демо.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://zolotarevmikhail.github.io/seller-price-radar-mvp/" target="_blank" rel="noopener">Открыть демо</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 9 -->
+    <article class="case fade hidden" data-theme="bots" id="case-vkgiveaway">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 09 · ЧАТ-БОТЫ</div>
+          <h3>Бот-розыгрыш для сообществ ВКонтакте</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>VK API</span><span>SQLite</span><span>Работа 24/7</span></div>
+      </div>
+      <img class="case-img chat" src="shots/uchastie.webp" alt="Диалог с ботом-розыгрышем ВК: приветствие, кнопка «Участвовать», подтверждение участия и защита от повторов" loading="lazy">
+      <div class="case-cap">Участие по кнопке — повторно зарегистрироваться нельзя</div>
+      <img class="case-img chat" src="shots/admin.webp" alt="Админ-команды бота: статус розыгрыша и выбор случайного победителя со ссылкой на профиль" loading="lazy">
+      <div class="case-cap">Админ-команды: статус розыгрыша и случайный победитель</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Бот-розыгрыш (giveaway) для сообществ ВКонтакте: участник нажимает <b>«Участвовать»</b> в сообщениях сообщества, бот проверяет подписки, а в конце честно выбирает победителя. Организатору не нужно вручную собирать участников и следить за честностью.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Участие по кнопке «Участвовать». <b>Проверка подписки сразу на несколько сообществ</b> — работает для совместных розыгрышей. <b>Защита от накруток</b>: один человек — одно участие, повторно пройти нельзя. Случайный выбор победителя <b>со ссылкой на профиль</b>. Дата окончания розыгрыша и сброс раунда <b>в один клик</b>. Все участники хранятся в базе данных (SQLite). Работа 24/7: при сбоях связи бот <b>сам переподключается</b>.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Рабочий MVP: собран и <b>проверен вживую на тестовом сообществе ВКонтакте</b>. <b>12 локальных тестов пройдены</b> до запуска. Организатор розыгрыша избавлен от ручного сбора участников, проверки подписок и споров о честности — победителя выбирает случай, а не рука.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, VK API (Long Poll), SQLite. Архитектура переносится на другие механики ботов для сообществ.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/vk-giveaway-bot" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 10 -->
+    <article class="case fade hidden" data-theme="bots">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 10 · ЧАТ-БОТЫ</div>
+          <h3>Реферальный бот-привратник для Telegram</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>Postback</span><span>SQLite</span><span>Автотесты</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Впускать в приватную Telegram-группу <b>только тех, кто выполнил условие</b> в партнёрской системе — автоматически, без ручной проверки. Проект из практики: собственный прототип, который можно подключить к любой партнёрке или продаже доступов.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Пользователь заходит по ссылке с <b>уникальным кодом</b> — бот запоминает пару «код ↔ пользователь». Партнёрская система присылает <b>postback</b> (авто-уведомление через встроенный веб-сервер бота) — бот выдаёт <b>одноразовую ссылку-приглашение</b> в группу. <b>Защита от повторной выдачи</b>: каждая выдача фиксируется в базе, дубль не пройдёт. Ручная выдача админом командой <b>/grant</b>, выбор группы командой <b>/setgroup</b> прямо в чате — без правки конфигов. Опциональный секрет в postback — защита от подделки заявок. Токен и настройки — в отдельном файле, в коде их нет. Логика проверена <b>9 автотестами</b>.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Рабочий бот-привратник: весь цикл «ссылка → оплата/действие → доступ в группу» идёт без человека. Хранение в одном файле базы — никаких внешних сервисов, развёртывается на недорогом сервере. Готов как <b>шаблон под заказ клиента</b>: под любую партнёрскую систему с postback.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, pyTelegramBotAPI, SQLite, встроенный HTTP-сервер.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/telegram-referal-bot" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 11 -->
+    <article class="case fade" data-theme="agents" id="case-newsagent">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 11 · AI-АГЕНТЫ</div>
+          <h3>NewsAgent — AI-агент мониторинга новостей</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>Ollama (LLM)</span><span>RSS</span><span>CSV/Excel</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Не пропустить важные новости, но и не тонуть в лентах: агент сам собирает новости из открытых источников, отсеивает мусор и каждое утро присылает <b>готовый дайджест</b>. Основа под заказные агенты мониторинга: новости, конкуренты, госзакупки, упоминания бренда.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Полный конвейер: <b>сбор из RSS-лент → удаление дублей → фильтрация по стоп-словам → разбор по рубрикам → AI-пересказ</b> каждой новости в 1–2 предложения. Итог — <b>ежедневный дайджест в Markdown</b> и <b>таблица-архив в CSV</b> для Excel. Все настройки (источники, рубрики, стоп-слова, промпт, расписание) — <b>в одном конфиге, правятся без программиста</b>. При сбое источника система <b>сообщает об этом</b>, а не молчит; есть запасной режим без нейросети.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val"><b>Рабочий прототип (MVP)</b>, можно показать демо. Клиент получает утреннюю сводку вместо ручного листания лент — а на его базе агент легко перенастраивается под его нишу и источники.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, Ollama (облачная нейросеть для пересказа), RSS, CSV/Excel.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/newsagent" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 12 -->
+    <article class="case fade hidden" data-theme="wb">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 12 · WB-АВТОМАТИЗАЦИЯ</div>
+          <h3>Утренняя сводка Wildberries — Telegram-бот</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>Telegram API</span><span>WB API</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Продавец WB каждый день руками проверяет в кабинете: сколько продали, сколько заказов, какие товары заканчиваются. Нужно, чтобы <b>готовая сводка приходила сама</b> — каждое утро, без открытия кабинета.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Telegram-бот с данными кабинета WB: <b>выручка и продажи вчера против позавчера</b>, новые заказы, топ товаров, <b>заканчивающиеся и пустые остатки с названиями</b>. Автоотправка в 10:00 по Москве, подписка/отписка командами. Работает с официальным API WB: при отказе WB по лимиту бот <b>сам ждёт и повторяет</b>, а не падает.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Рабочий бот на реальном кабинете (продажи SPR). Первый кирпич «финансового стража» селлера: дальше — контроль цен, рентабельности и рекламных расходов. Код открыт на GitHub.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, Telegram Bot API, Statistics/Analytics/Content API Wildberries.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/wb-morning-bot" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 13 -->
+    <article class="case fade hidden" data-theme="bots">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 13 · ЧАТ-БОТЫ</div>
+          <h3>Телеграм-бот для салона красоты</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>Telegram Bot API</span><span>SQLite</span><span>Запись клиентов</span></div>
+      </div>
+      <img class="case-img chat" src="shots/salon-bot-mvp.webp" alt="Чат с ботом салона красоты: шаги записи, кнопки вызова администратора, ответ на вопрос клиентки и закреплённое меню" loading="lazy">
+      <div class="case-cap">Запись шагами, ответы на вопросы клиенток и закреплённое меню — всё в одном диалоге</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Клиентки салона спрашивают одно и то же (цены, «больно ли», «сколько держится») в рабочее время администратора. Нужен бот, который отвечает на типовые вопросы, принимает заявки на запись и соединяет с администратором, когда нужен живой человек.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Меню: услуги, мастера, акции, контакты. Ответы на частые вопросы <b>по базе знаний — без выдумок</b>: чего нет в базе, бот не придумывает, а зовёт администратора. <b>Запись за 4 шага</b> (услуга → мастер → день → время) — заявка прилетает администратору, он подтверждает вручную, <b>двойных броней нет</b>. «Позвать администратора» доступно из любого места диалога, вопрос уходит с историей переписки, ответ — реплаем из Telegram. Вся настройка салона (услуги, цены, вопросы) — <b>в одном файле, правится без программиста</b>.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Рабочий MVP, проверен вживую по всем сценариям. Собран для передачи заказчику: два пути работы — собственный компьютер или недорогой сервер 24/7. Архитектура — <b>шаблон под любой салон или студию услуг</b>.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, python-telegram-bot, SQLite.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/salon-bot-mvp" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 14 -->
+    <article class="case fade hidden" data-theme="zavod">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 14 · КОНТЕНТ-ЗАВОД</div>
+          <h3>Контент-завод: ИИ-конвейер публикаций</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>API соцсетей</span><span>ИИ-конвейер</span><span>Без библиотек</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Регулярный контент <b>в любых соцсетях и под любую тему</b> без найма копирайтера — и без риска, что нейросеть выложит что-то без ведома владельца. Завод должен сам находить темы и писать посты, а человек — только решать: да или нет.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Конвейер из четырёх шагов: <b>поиск тем в интернете</b> по теме и расписанию владельца → <b>карточка идеи в боте</b> (суть, почему тема цепляет, ссылки на источники) → <b>готовый пост</b> под тон и площадку → <b>публикация одной кнопкой</b> с отчётом в чате. Управление — пятью кнопками в привычном мессенджере: «одобрить / переписать / отклонить». <b>Ничего не публикуется без одобрения человека</b> — дважды: и идея, и черновик. <b>Юридический фильтр встроен</b>: каждый пост проверяется на соответствие закону о рекламе (без обещаний результата и дохода, маркировка чужой рекламы) и закону о персональных данных (имена и фото людей — только с согласия или обезличенно). Отклонённое уходит в архив, ничего не теряется.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val"><b>Универсальный шаблон</b>: заполняется анкета из 32 вопросов (тема, аудитория, тон, расписание, площадки) — и завод работает под неё. Площадка публикации подключается через её API — <b>один и тот же конвейер для любых соцсетей</b>. Готов механизм передачи заказчику: бот и каналы оформляются на заказчика, обкатка, инструкция — и он ведёт сам. <b>Исходники открыты</b>, работа проверена вживую.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python без сторонних библиотек, публикация через API соцсетей (подключается любая площадка), открытые источники без ключей. Архитектура переносится и на новые соцсети, и на другие языки.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/content-zavod" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 15 -->
+    <article class="case fade hidden" data-theme="wb">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 15 · WB/OZON</div>
+          <h3>Утренняя сводка WB + Ozon — Telegram-бот, две площадки в одном сообщении</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>Telegram API</span><span>WB API</span><span>Ozon Seller API</span><span>Работа 24/7</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Селлер WB и Ozon каждое утро руками листает два кабинета и сравнивает цифры: что продалось, что заказали, какие товары заканчиваются. Нужна <b>готовая сводка в Telegram</b> — сама, в одно и то же время, по обеим площадкам сразу.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Telegram-бот, который каждый день в <b>10:00 по Москве</b> присылает сводку по обоим кабинетам: <b>выручка и продажи «вчера против позавчера»</b> с разницей в рублях и процентах, новые заказы, <b>топ-3 товара по выручке</b>, <b>заканчивающиеся товары (порог 5 штук) и закончившиеся — с названиями</b>. По Ozon — выручка и заказанные штуки плюс те же блоки остатков. Управление командами: <b>/summary</b> (обе площадки разом), <b>/ozon</b>, <b>/start</b>, <b>/stop</b>. Надёжность: при отказе API по лимиту бот <b>сам ждёт и повторяет</b> (до 2 попыток); сбой Ozon <b>не роняет</b> WB-сводку; если ключи Ozon не настроены — бот штатно работает только по WB. Токены — в отдельном файле .env, в код и git не попадают. Работает круглосуточно: <b>автозапуск при включении компьютера</b> и авто-перезапуск при падении.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Проверен живым прогоном на реальных кабинетах. Вместо утреннего листания двух кабинетов — <b>одно сообщение в Telegram</b>. Бот подсвечивает заканчивающиеся и пустые остатки — это прямая защита выручки: <b>позиция с нулевым остатком теряет выдачу</b> в поиске маркетплейса. Код открыт на GitHub; продукт личный (автор — сам селлер WB/Ozon), <b>можно установить и под ключ заказчику</b>.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, pyTelegramBotAPI, официальный API Wildberries, Seller API Ozon, launchd (автозапуск на Mac).</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/wb-morning-bot" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 16 -->
+    <article class="case fade hidden" data-theme="tools">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 16 · ПРОГРАММЫ</div>
+          <h3>Напоминалка для рабочего стола</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>tkinter</span><span>SQLite</span><span>Mac и Windows</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Напоминания, которые не потеряются: не в телефоне и не в браузере, а прямо на рабочем столе. Задача со своим временем всплывает поверх всех окон в нужную минуту — пропустить невозможно.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Окно-напоминалка с таблицей задач: у каждой строки своё время и статус, статусы подсвечены цветом — <b>ожидает / готово / просрочено</b>. <b>Быстрые кнопки «Через 1/5/15/30 мин» и «Через 1 час»</b> — напоминание ставится одним нажатием, без набора даты; точное время — через поле задачи. <b>Повторяющиеся напоминания</b> — каждый день и каждый месяц, с честным переносом дат: короткие месяцы и високосный год расписание не ломают. Фильтр по статусу, <b>всплывающие уведомления поверх всех окон</b>. Задачи хранятся в локальной базе SQLite — ничего не теряется после перезапуска.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Рабочая программа для Mac и Windows: запустил — и она напоминает. Вся история задач остаётся на своём компьютере, без облачных сервисов. Код открыт на GitHub.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, tkinter (графический интерфейс), SQLite.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/reminder-app-tkinter" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 17 -->
+    <article class="case fade hidden" data-theme="tools">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 17 · ПРОГРАММЫ</div>
+          <h3>Менеджер паролей с шифрованием</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>Fernet</span><span>SHA-256</span><span>SQLite</span><span>Mac и Windows</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Пароли в заметках и блокноте — мишень: утащили один файл — утащили все доступы. Нужна программа, которая живёт на своём компьютере, шифрует пароли и не отдаёт их никому, включая облачные сервисы.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Консольный менеджер паролей. <b>Мастер-пароль хранится только как SHA-256-хеш</b> — сам пароль нигде не сохраняется, из файла базы его не вытащить. Пароли сайтов <b>шифруются алгоритмом Fernet</b> с локальным ключом, данные лежат в SQLite. Меню из четырёх действий: <b>добавить / получить / список / удалить</b>. Встроенный <b>генератор надёжных паролей</b>: длина 8–64 символа, выбор типов символов. Найденный пароль <b>копируется в буфер обмена</b> — вставил и пошёл дальше.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Личный сейф для паролей на своём компьютере: файл с базой без мастер-пароля бесполезен. Работает на Mac и Windows, код открыт на GitHub — можно взять за основу под заказ, в том числе с графическим окном.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, шифрование Fernet, SHA-256, SQLite.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/password-manager-cli" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 18 -->
+    <article class="case fade hidden" data-theme="tools">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 18 · ПРОГРАММЫ</div>
+          <h3>Генератор PDF-документов по шаблону</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>WeasyPrint</span><span>HTML-шаблоны</span><span>CSV и JSON</span><span>Mac и Windows</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Фрилансеры и малый бизнес каждый месяц делают однотипные документы — счёт, акт, чек: вручную переписывают данные из таблицы в Word, путаются в номерах и суммах. Нужна программа, которая сама собирает готовый документ из таблицы с данными и бланка с фирменным дизайном.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Консольный генератор PDF. Вход — <b>CSV или JSON с данными</b>, бланк — <b>обычный HTML-файл с метками вида {{ поле }}</b>: любой дизайн документа меняется без правки кода. Программа читает таблицу, <b>сама считает суммы по позициям и общий итог</b>, подставляет данные в бланк и собирает PDF через WeasyPrint. Один файл данных может содержать несколько документов — <b>партия счетов за один запуск</b>. Готовый PDF открывается сам — сразу отправлять клиенту. Понятные сообщения об ошибках на русском, данные экранируются, кириллица чистая.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Документ за пару секунд вместо ручного копирования из Excel, без опечаток в суммах. Работает офлайн — <b>данные не покидают компьютер</b>. Код открыт на GitHub — берётся за основу под заказ: другие бланки (акт, накладная, чек), поля и логика нумерации.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, WeasyPrint, HTML-шаблоны. Подходит и под другие документы по шаблону — договоры, пропуска, сертификаты.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/pdf-generator" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 19 -->
+    <article class="case fade hidden" data-theme="bots">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 19 · ЧАТ-БОТЫ</div>
+          <h3>ИИ-ассистент сообщества ВКонтакте</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>vkbottle</span><span>VK Long Poll</span><span>ProxyAPI</span><span>GitHub</span></div>
+      </div>
+      <img class="case-img" src="shots/vk-ai-assistant.webp" alt="Скриншот: диалог с ИИ-ассистентом сообщества ВКонтакте" loading="lazy">
+      <div class="case-cap">Демонстрация на условном диалоге: клиент пишет своими словами — ассистент отвечает свободным текстом и помнит контекст.</div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Клиенты пишут в сообщения сообщества ВК и не любят ожидание и меню из кнопок — им нужно объяснить свой вопрос своими словами и получить живой ответ. Нужен бот, который ведёт свободный текстовый разговор от имени сообщества и не придумывает факты.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Бот на VK Long Poll — свой сервер не нужен, работает от одного токена сообщества. Ответ клиента идёт через нейросеть: <b>свободный разговорный текст, а не меню</b>. Ассистент <b>помнит контекст диалога</b> — хранит последние реплики каждого собеседника отдельно. Характер и знания — <b>в текстовом файле</b>, правится без кода. Надёжность: при сбое сети или лимите — <b>две повторные попытки</b>, потом вежливый ответ клиенту; бот не падает. Токены только в локальном .env — <b>в коде и репозитории секретов нет</b>.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Проверен вживую на собственном сообществе: цикл «сообщение клиента → нейросеть → ответ» работает end-to-end. Код открыт на GitHub — берётся за основу под заказ: версия для Telegram, подключение базы знаний сообщества, передача сложных вопросов менеджеру.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, vkbottle (VK Long Poll), ProxyAPI (нейросеть).</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/vk-ai-assistant-bot" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 20 -->
+    <article class="case fade hidden" data-theme="agents">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 20 · AI-АВТОМАТИЗАЦИЯ</div>
+          <h3>«Заявка → КП» — нейросеть расшифровывает заявку, код считает по прайсу</h3>
+        </div>
+        <div class="tags"><span>Python</span><span>Flask</span><span>ИИ-расшифровка</span><span>SQLite</span><span>Word/Excel</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Малые производства и мастерские получают заявки кто во что горазд: текстом в мессенджере, Word-файлом, фото или таблицей. Менеджер вручную расшифровывает каждую в позиции, сверяет с прайсом и собирает коммерческое предложение — <b>получасами и с ошибками</b>. Нужна система, которая превратит заявку в любом виде в готовое КП строго по прайсу компании.</div></div>
+        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Веб-система «Заявка → КП». Заявка приходит <b>в любом виде</b>: файл (PDF, Excel, Word, фото), текст, письмо с почты, форма на сайте, бот Telegram или ВКонтакте, API. <b>Нейросеть разбирает заявку на позиции</b>, оператор проверяет расшифровку на простом экране. <b>Стоимость считает обычный код строго по прайсу</b> — ИИ в цифры не лезет, итог всегда точный. В один клик собирается <b>готовое коммерческое предложение в Word и таблица Excel</b>; отправка по почте, в Telegram, ВКонтакте или на печать. Прайс правится на экране или загружается выгрузкой из бухгалтерии (Excel) — <b>с предпросмотром изменений до подтверждения</b>. Каждая заявка сохраняется в историю (база SQLite).</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Собственный продукт для портфолио, <b>проверен вживую</b>. То, что менеджер делает получасами с калькулятором и Word, занимает минуты. Развёртывается <b>без платных подписок</b>: нейросети платится только за каждую обработанную заявку — копейки. Код открыт на GitHub — берётся за основу под заказ: под прайс и шаблон КП любой компании.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, Flask (веб-интерфейс), docxtpl (Word-шаблоны), openpyxl (Excel), pdfplumber (разбор PDF), SQLite.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/ai-zayavki-kp" target="_blank" rel="noopener">Открыть код на GitHub</a>
+      </div>
+    </article>
+
+    <!-- КЕЙС 21: ПРОВЕРКА ЧУЖОГО ВАЙБ-КОДА -->
+    <article class="case fade hidden" data-theme="vcheck">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 21 · ПРОВЕРКА КОДА</div>
+          <h3>Проверка чужого вайб-кода: три кейса с до/после</h3>
+        </div>
+        <div class="tags"><span>Сверка с первоисточником</span><span>Живые прогоны</span><span>История гита</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Что это</div><div class="val">Три учебных разбора вайбкод-проектов по мотивам реальных ТЗ с биржи: <b>дашборд, который врал цифрами</b> (возвраты прибавлялись к выручке, разница 21 640 ₽ за две недели), <b>парсер, падающий ночью</b> (одна ошибка источника валила сбор, а собранное затиралось само) и <b>утёкшие ключи</b> (токен бота и ключ магазина — в коде, в .env и в истории гита открытого репо).</div></div>
+        <div class="case-row"><div class="lbl">Как проверял</div><div class="val">Сверка каждой ключевой цифры с первоисточником независимо другим инструментом, чтение кода по каждой находке, живые прогоны «до/после» на одних и тех же данных. Итог — <b>отчёт по приоритетам</b> (критично/важно/мелочи) с таблицей сверки; сломанная и исправленная версии лежат рядом — обе можно открыть и проверить самому.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="vibecode-check.html">Смотреть три кейса</a>
+      </div>
+    </article>
+
+    <!-- УСЛУГА: AI-СТРАТЕГИЯ -->
+    <article class="case fade hidden" data-theme="strategy">
+      <div class="case-head">
+        <div>
+          <div class="case-num">УСЛУГА · AI-СТРАТЕГИИ</div>
+          <h3>Стратегия продвижения продаж под ключ</h3>
+        </div>
+        <div class="tags"><span>Исследование рынка</span><span>Анкета</span><span>Промпты</span><span>PDF</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Как работает</div><div class="val">Изучаю ваш рынок и конкурентов, разбираю ваши цели, ресурсы и аудиторию — и собираю <b>персональную стратегию продвижения в соцсетях</b> на 3, 6 или 12 месяцев. Дальше веду её: каждый месяц смотрю реальные цифры и корректирую план.</div></div>
+        <div class="case-row"><div class="lbl">Что получает клиент</div><div class="val"><b>Оценку реалистичности своей цели</b> с расчётом темпа роста, флагманское направление вместо «всего сразу», помесячные вехи, шапки профилей, скрипты «Кто я» и «Почему стоит обратиться ко мне», <b>контент-план на 30 дней по дням и площадкам</b>, воронку продаж. Для регулируемых ниш (БАД, медицина, финансы) контент проверяется на <b>соответствие закону «О рекламе»</b>.</div></div>
+        <div class="case-row"><div class="lbl">Чем отличается</div><div class="val">Стратегия ведёт <b>к продажам и обращениям, а не к «подписчикам и охватам»</b> — от цели по доходу через воронку продаж. Не «контент-план на год вперёд», который устареет через месяц, а <b>живая стратегия с ежемесячной корректировкой</b> по реальным цифрам. Данные клиентов обезличены. Подходит любой нише — товары, услуги, инфобизнес, локальный бизнес.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="#contact">Обсудить вашу стратегию</a>
+      </div>
+    </article>
+
+    <!-- УСЛУГА: ЛИЧНЫЙ БРЕНД -->
+    <article class="case fade hidden" data-theme="strategy">
+      <div class="case-head">
+        <div>
+          <div class="case-num">УСЛУГА · AI-СТРАТЕГИИ</div>
+          <h3>Личный бренд под ключ</h3>
+        </div>
+        <div class="tags"><span>Анализ области</span><span>Узкое направление</span><span>Конвейер</span><span>PDF</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Как работает</div><div class="val">Анализирую выбранную вами область, помогаю выбрать <b>одно узкое направление</b> вместо расплывчатого «всё обо всем» — и собираю <b>персональную стратегию личного бренда</b> на 3, 6 или 12 месяцев: площадки, форматы, ритм публикаций, голос канала. Каждый месяц — разбор результатов и корректировка.</div></div>
+        <div class="case-row"><div class="lbl">Что получает клиент</div><div class="val"><b>Анализ области</b>: кто уже говорит в нише и какие углы свободны. Узкое позиционирование, <b>система сбора тем</b> (ежедневная копилка идей — публикации не прерываются, даже если пропала неделя), <b>реалистичный ритм публикаций</b>, шапки профилей, контент-план на 30 дней с запасом, <b>контрольные точки +2 недели / +1 / +3 / +6 месяцев</b>. Опция — <b>контент-конвейер</b>: ежедневный поиск тем, бот показывает идею и черновик, <b>публикация только по кнопке человека</b>. Контент проверяется на соответствие закону «О рекламе» и закону о персональных данных.</div></div>
+        <div class="case-row"><div class="lbl">Чем отличается</div><div class="val">Стратегия ведёт <b>к репутации и входящим обращениям, а не к «подписчикам ради подписчиков»</b>. На старте меряем входы: стабильность выпуска и обращения, а не охваты. Никакой автопубликации — <b>каждый пост утверждает человек</b>. Данные клиентов обезличены. Подходит любой сфере — товары, услуги, ремесло, консультации.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="#contact">Обсудить ваш личный бренд</a>
+      </div>
+    </article>
+
+  </section>
+
+  <section id="contact">
+    <div class="contact fade">
+      <h2>Готов обсудить вашу задачу</h2>
+      <p>Выберите удобный канал — отвечу за 1–2 часа в рабочее время. Подскажу оптимальный формат и срок.</p>
+      <div class="btns">
+        <a class="contact-link" href="#" onclick="event.preventDefault();toggleContact('tg')" aria-label="Написать в Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          Написать в Telegram
+        </a>
+        <a class="contact-link" href="#" onclick="event.preventDefault();toggleContact('mail')" aria-label="Отправить email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          Отправить email
+        </a>
+        <a class="contact-link" href="#" onclick="event.preventDefault();toggleContact('vk')" aria-label="Написать во ВКонтакте">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.579 6.855c.14-.465 0-.806-.661-.806h-2.193c-.557 0-.813.295-.953.62 0 0-1.115 2.717-2.695 4.482-.512.51-.744.674-1.024.674-.139 0-.341-.164-.341-.629V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504 0 .528.79.65.872 2.138v3.228c0 .708-.128.836-.408.836-.745 0-2.553-2.729-3.626-5.851-.21-.607-.42-.854-.98-.854H2.752c-.625 0-.75.295-.75.62 0 .582.745 3.462 3.461 7.271 1.811 2.601 4.363 4.011 6.687 4.011 1.395 0 1.566-.313 1.566-.853v-1.966c0-.626.133-.752.574-.752.325 0 .882.164 2.183 1.418 1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931-.197-.615-.907-1.51-1.85-2.569-.512-.604-1.279-1.255-1.512-1.582-.325-.419-.232-.604 0-.976 0 0 2.677-3.764 2.95-5.04z"/></svg>
+          ВКонтакте
+        </a>
+        <a class="contact-link" href="#" onclick="event.preventDefault();toggleContact('call')" aria-label="Заказать обратный звонок">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Заказать звонок
+        </a>
+      </div>
+
+      <div class="contact-form" id="formTelegram">
+        <p class="contact-form-title">Напишите сообщение — отвечу в Telegram.</p>
+        <form class="contact-form-row" onsubmit="return submitTelegram(event)">
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
+          <textarea id="tgMessage" rows="4" placeholder="Здравствуйте! Хочу обсудить задачу..." class="contact-input contact-textarea" required></textarea>
+          <button type="submit" class="contact-submit">Отправить</button>
+        </form>
+      </div>
+
+      <div class="contact-form" id="formEmail">
+        <p class="contact-form-title">Оставьте ваш email — отвечу письмом.</p>
+        <form class="contact-form-row" onsubmit="return submitEmail(event)">
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
+          <input type="email" id="mailFrom" required placeholder="ваш@email.com" autocomplete="email" class="contact-input">
+          <textarea id="mailTask" rows="3" placeholder="Коротко о задаче (необязательно)" class="contact-input contact-textarea"></textarea>
+          <button type="submit" class="contact-submit">Отправить</button>
+        </form>
+      </div>
+
+      <div class="contact-form" id="formVk">
+        <p class="contact-form-title">Напишите сообщение — отвечу в ВКонтакте.</p>
+        <form class="contact-form-row" onsubmit="return submitVk(event)">
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
+          <textarea id="vkMessage" rows="4" placeholder="Здравствуйте! Хочу обсудить задачу..." class="contact-input contact-textarea" required></textarea>
+          <button type="submit" class="contact-submit">Отправить</button>
+        </form>
+      </div>
+
+      <div class="contact-form" id="formCall">
+        <p class="contact-form-title">Оставьте номер — перезвоню в течение часа.</p>
+        <form class="contact-form-row" onsubmit="return submitCall(event)">
+          <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
+          <input type="tel" id="callPhone" required placeholder="+7 (___) ___-__-__" pattern="[\+\d\s\-\(\)]{6,}" autocomplete="tel" class="contact-input">
+          <button type="submit" class="contact-submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>Михаил · ИИ-фриланс для бизнеса и маркетплейсов</span>
+    <span>Работы: <a href="raboty.html" style="color:inherit">все 22</a> · GitHub: <a href="https://github.com/ZolotarevMikhail" style="color:inherit" target="_blank" rel="noopener">ZolotarevMikhail</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Снимок начальной видимости: кейсы, скрытые в HTML при загрузке страницы,
+// не должны раскрываться сворачиванием фильтра.
+const initialHidden=new Set(Array.from(document.querySelectorAll('#cases .case')).filter(c=>c.classList.contains('hidden')));
+// Фильтрация работ по теме. theme — код темы ('all' чтобы показать все).
+// src — элемент-кнопка, на которую нажали (для подсветки).
+// Универсальный toggle-принцип: один клик — открыли все кейсы темы, второй — свернули лишние.
+// При первом открытии страницы видны образцовые кейсы (по одному на тему);
+// при нажатии на тему — открываются ВСЕ её кейсы, при повторном — снова только образцовые.
+function filterWorks(theme,src){
+  const cases=document.querySelectorAll('#cases .case');
+
+  // Какие кейсы должны быть видны «по умолчанию» для каждой темы.
+  // Номер кейса сравнивается по началу строки (startsWith), потому что в DOM хранится
+  // полный текст: «КЕЙС 01 · АНАЛИТИКА», а нам нужно только «КЕЙС 01».
+  const defaults={
+    dashboards: ['КЕЙС 01'],
+    bots:       ['КЕЙС 02'],
+    landing:    ['КЕЙС 03'],
+    seo:        ['КЕЙС 04'],
+    posts:      ['КЕЙС 05'],
+    zavod:      ['КЕЙС 14'],
+    wb:         ['КЕЙС 07'],
+    agents:     ['КЕЙС 11'],
+    tools:      ['КЕЙС 16'],
+    strategy:   ['УСЛУГА'],
+    vcheck:     ['КЕЙС 21'],
+  };
+  // Сводный «стартовый набор» — все образцовые сразу видны.
+  const allDefaults=Object.values(defaults).flat();
+
+  // Активна ли сейчас эта же тема (т.е. видны ВСЕ её кейсы, а не только образцовый)?
+  const visibleCases=Array.from(cases).filter(c=>!c.classList.contains('hidden'));
+  const themes=new Set(visibleCases.map(c=>c.getAttribute('data-theme')));
+  const activeTheme=(themes.size===1 && [...themes][0]===theme)?theme:null;
+
+  if(activeTheme===theme){
+    // Повторный клик — вернуть ровно начальное состояние страницы:
+    // видны только образцовые кейсы, и только те, что не были скрыты в HTML.
+    cases.forEach(c=>{
+      const num=c.querySelector('.case-num')?.textContent.trim()||'';
+      const isDefault=allDefaults.some(d=>num.startsWith(d));
+      c.classList.toggle('hidden',!(isDefault && !initialHidden.has(c)));
+    });
+  } else {
+    // Первый клик (или смена темы) — открыть все кейсы выбранной темы.
+    cases.forEach(c=>{
+      const match=(theme==='all'||c.getAttribute('data-theme')===theme);
+      c.classList.toggle('hidden',!match);
+    });
+  }
+
+  // Подсветка активной кнопки в панели фильтра.
+  document.querySelectorAll('.filter-bar .fbtn').forEach(b=>b.classList.toggle('active',b.getAttribute('data-theme')===theme && activeTheme!==theme));
+  // Подсветка активной карточки услуги (на этой странице услуг нет — строка безопасна).
+  document.querySelectorAll('.svc').forEach(s=>s.classList.toggle('active',s.getAttribute('data-theme')===theme && activeTheme!==theme));
+}
+
+// Открытие темы по ссылке вида raboty.html?theme=dashboards.
+// Прокрутку к #cases не делаем — браузер сам приводит к якорю, если он есть.
+(function(){
+  try{
+    const t=new URLSearchParams(location.search).get('theme');
+    if(t){filterWorks(t,null);}
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
