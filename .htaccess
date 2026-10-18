@@ -1,0 +1,16 @@
+# Перенаправление на https://zolmy.ru с любых копий (http, www) + своя 404.
+# Положить в корень сайта на Beget рядом с index.html.
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.
+RewriteRule ^ https://zolmy.ru%{REQUEST_URI} [L,R=301]
+ErrorDocument 404 /404.html
+
+# Браузер обязан перепроверять HTML после каждой выкладки,
+# иначе Safari показывает старую копию (кэш на усмотрение браузера).
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|xml)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
