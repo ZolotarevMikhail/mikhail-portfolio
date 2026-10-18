@@ -476,21 +476,60 @@
       </div>
     </article>
 
-    <!-- КЕЙС 21: ПРОВЕРКА ЧУЖОГО ВАЙБ-КОДА -->
+    <!-- КЕЙСЫ 21-23: ПРОВЕРКА ЧУЖОГО ВАЙБ-КОДА -->
     <article class="case fade" data-theme="vcheck">
       <div class="case-head">
         <div>
           <div class="case-num">КЕЙС 21 · ПРОВЕРКА КОДА</div>
-          <h3>Проверка чужого вайб-кода: три кейса с до/после</h3>
+          <h3>Числа в дашборде не сходятся</h3>
         </div>
-        <div class="tags"><span>Сверка с первоисточником</span><span>Живые прогоны</span><span>История гита</span></div>
+        <div class="tags"><span>Сверка с первоисточником</span><span>Отчёт по приоритетам</span><span>До/после</span></div>
       </div>
+      <img class="case-img" src="shots/vibecode-case1-posle.png" alt="Исправленный дашборд: выручка, заказы и средний чек совпали с кабинетом" loading="lazy">
+      <div class="case-cap">Исправленная версия: 5 ключевых показателей сверены с выгрузкой — 5 из 5 совпали.</div>
       <div class="case-body">
-        <div class="case-row"><div class="lbl">Что это</div><div class="val">Три учебных разбора вайбкод-проектов по мотивам реальных ТЗ с биржи: <b>дашборд, который врал цифрами</b> (возвраты прибавлялись к выручке, разница 21 640 ₽ за две недели), <b>парсер, падающий ночью</b> (одна ошибка источника валила сбор, а собранное затиралось само) и <b>утёкшие ключи</b> (токен бота и ключ магазина — в коде, в .env и в истории гита открытого репо).</div></div>
-        <div class="case-row"><div class="lbl">Как проверял</div><div class="val">Сверка каждой ключевой цифры с первоисточником независимо другим инструментом, чтение кода по каждой находке, живые прогоны «до/после» на одних и тех же данных. Итог — <b>отчёт по приоритетам</b> (критично/важно/мелочи) с таблицей сверки; сломанная и исправленная версии лежат рядом — обе можно открыть и проверить самому.</div></div>
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Найти, почему цифры красивого вайбкод-дашборда не сходятся с кабинетом Wildberries.</div></div>
+        <div class="case-row"><div class="lbl">Что нашёл</div><div class="val"><b>Возвраты прибавлялись к выручке</b> — минус 21 640 ₽ на двух неделях; <b>штуки выдавались за заказы</b> (144 вместо 73, отсюда неверный средний чек); <b>плитки не пересчитывались</b> в фильтрах. Итого 9 находок: 3 критичные.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Сверка каждой цифры с выгрузкой независимым пересчётом — <b>совпадение 5 из 5</b>. Сломанная и исправленная версии лежат рядом, обе можно открыть самому.</div></div>
       </div>
       <div style="padding:0 24px 20px">
-        <a class="btn btn-primary" href="vibecode-check.html">Смотреть три кейса</a>
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/vibe-code-checks/tree/main/01-dashboard-numbers" target="_blank" rel="noopener">Отчёт и обе версии — на GitHub</a>
+      </div>
+    </article>
+
+    <article class="case fade" data-theme="vcheck">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 22 · ПРОВЕРКА КОДА</div>
+          <h3>Парсер падает ночью</h3>
+        </div>
+        <div class="tags"><span>Повторы и таймауты</span><span>Атомарная запись</span><span>Стенд API</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Вайбкод-парсер цен конкурента умирал по ночам и оставлял пустой CSV.</div></div>
+        <div class="case-row"><div class="lbl">Что нашёл</div><div class="val">Любая ошибка источника (429/500) рвала весь сбор, а <b>файл результата открывался на перезапись в начале</b> — утренний CSV пустой не потому, что «не собрали», а потому что собрали и стёрли. Запросы без таймаута и пауз: зависший источник подвешивал процесс.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Повторы с паузой, таймаут 20 с, <b>атомарная запись</b> (временный файл + подмена), товар без цены пропускается с записью в лог. В комплекте стенд-имитация API: «до/после» проверяется на одних и тех же ответах.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/vibe-code-checks/tree/main/02-parser-night-crash" target="_blank" rel="noopener">Стенд, логи и обе версии — на GitHub</a>
+      </div>
+    </article>
+
+    <article class="case fade" data-theme="vcheck">
+      <div class="case-head">
+        <div>
+          <div class="case-num">КЕЙС 23 · ПРОВЕРКА КОДА</div>
+          <h3>Ключи в коде и .env</h3>
+        </div>
+        <div class="tags"><span>Скан истории гита</span><span>Перевыпуск ключей</span><span>.gitignore + .env.example</span></div>
+      </div>
+      <div class="case-body">
+        <div class="case-row"><div class="lbl">Задача</div><div class="val">Боты «висели мёртвые» — причина нашлась не в ботах.</div></div>
+        <div class="case-row"><div class="lbl">Что нашёл</div><div class="val"><b>Токен бота и ключ магазина — в коде, в .env и в истории гита</b> открытого репозитория; бот печатал все ключи в лог при каждом старте. «Удалю .env и запушу заново» не работает: история гита хранит содержимое навсегда.</div></div>
+        <div class="case-row"><div class="lbl">Результат</div><div class="val">Ремонт начинается не с кода, а с <b>перевыпуска ключей</b> — план в отчёте, плюс .gitignore и .env.example. Скан утечки воспроизводится командами из README за 2–3 минуты.</div></div>
+      </div>
+      <div style="padding:0 24px 20px">
+        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/vibe-code-checks/tree/main/03-keys-in-code" target="_blank" rel="noopener">Утечку можно увидеть самому — команды в README</a>
       </div>
     </article>
 
@@ -631,7 +670,7 @@ function filterWorks(theme,src){
     agents:     ['КЕЙС 11'],
     tools:      ['КЕЙС 16'],
     strategy:   ['УСЛУГА'],
-    vcheck:     ['КЕЙС 21'],
+    vcheck:     ['КЕЙС 21','КЕЙС 22','КЕЙС 23'],
   };
   // Сводный «стартовый набор» — все образцовые сразу видны.
   const allDefaults=Object.values(defaults).flat();
