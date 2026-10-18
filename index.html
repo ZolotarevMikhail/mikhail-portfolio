@@ -1,440 +1,223 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Михаил · ИИ-фриланс для маркетплейсов: дашборды, боты, контент</title>
-<meta name="description" content="Селлер Wildberries/Ozon. Делаю продающий контент, дашборды продаж, чат-ботов и лендинги для маркетплейсов. Примеры работ, сроки 1–7 дней.">
-<meta name="author" content="Михаил">
-<meta name="theme-color" content="#0a7d6b">
-<link rel="canonical" href="https://zolmy.ru/">
-<!-- Open Graph: красивая карточка при отправке ссылки в Telegram/ВК -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Михаил — чат-боты, дашборды WB/Ozon и ИИ-автоматизация на заказ</title>
+<meta name="description" content="Ставлю ИИ на задачи вашего бизнеса: чат-боты для Telegram и ВК, дашборды продаж WB/Ozon, лендинги и автоматизация кабинетов маркетплейсов. Срок 1–7 дней, демо до сдачи.">
+<meta property="og:title" content="Михаил — ИИ-фриланс для бизнеса и маркетплейсов">
+<meta property="og:description" content="Чат-боты, дашборды WB/Ozon, лендинги и автоматизация. Демо до сдачи, срок 1–7 дней.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Михаил · ИИ-фриланс">
-<meta property="og:title" content="Михаил · ИИ-фриланс для маркетплейсов">
-<meta property="og:description" content="Продающий контент, дашборды, чат-боты и лендинги для WB/Ozon. Опыт селлера, примеры работ.">
-<meta property="og:image" content="https://zolmy.ru/IMG_0630.jpeg">
 <meta property="og:url" content="https://zolmy.ru/">
-<meta property="og:locale" content="ru_RU">
-<!-- Twitter / Telegram preview -->
+<meta property="og:image" content="https://zolmy.ru/img/series2/scene-hero.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230a0e18'/%3E%3Ccircle cx='32' cy='32' r='10' fill='%232dd4b5'/%3E%3Ccircle cx='14' cy='20' r='5' fill='%232dd4b5'/%3E%3Ccircle cx='50' cy='22' r='5' fill='%23fbcf02'/%3E%3Ccircle cx='46' cy='48' r='5' fill='%232dd4b5'/%3E%3Cpath d='M18 23l6 6M46 26l-7 4M42 45l-6-9' stroke='%232dd4b5' stroke-width='3'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Михаил","url":"https://zolmy.ru/","jobTitle":"ИИ-фрилансер: чат-боты, дашборды WB/Ozon, лендинги и автоматизация","knowsAbout":["чат-боты","Telegram","ВКонтакте","дашборды","Wildberries","Ozon","лендинги","автоматизация","нейросети"],"sameAs":["https://github.com/ZolotarevMikhail"]}
+</script>
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Михаил · ИИ-фриланс для маркетплейсов">
-<meta name="twitter:description" content="Продающий контент, дашборды, чат-боты и лендинги для WB/Ozon.">
-<meta name="twitter:image" content="https://zolmy.ru/IMG_0630.jpeg">
-<!-- фавикон — иконка во вкладке браузера -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a7d6b'/><text x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>М</text></svg>">
-<link rel="apple-touch-icon" href="IMG_0630.jpeg">
-<style>
-:root{
-  --bg:#ffffff;--bg-soft:#f6f7f9;--card:#ffffff;--border:#e6e8ec;
-  --text:#1a1d23;--text-soft:#5b6470;--muted:#8b94a3;
-  --accent:#0a7d6b;--accent-soft:#e6f4f1;--accent-2:#0e8fe0;
-  --shadow:0 1px 2px rgba(20,25,35,.04),0 8px 24px rgba(20,25,35,.06);
-  --radius:16px;
-}
-:root[data-theme="dark"]{
-  --bg:#0e1116;--bg-soft:#151a22;--card:#161b24;--border:#232b38;
-  --text:#eef1f6;--text-soft:#b3bcc9;--muted:#7c8696;
-  --accent:#2dd4b5;--accent-soft:#102b27;--accent-2:#4cb3f5;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.4);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{overflow-x:hidden}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-@media(max-width:520px){.wrap{padding:0 16px}}
-
-/* шапка */
-header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px}
-.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
-.brand small{color:var(--muted);font-weight:500;font-size:13px}
-.theme-btn{background:var(--bg-soft);border:1px solid var(--border);color:var(--text);border-radius:10px;padding:8px 12px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px}
-.theme-btn:hover{border-color:var(--accent)}
-.nav-links{display:flex;gap:6px;align-items:center}
-.nav-link{font-size:13px;font-weight:600;color:var(--text-soft);text-decoration:none;padding:7px 12px;border-radius:10px;transition:color .15s,background .15s}
-.nav-link:hover{color:var(--text);background:var(--bg-soft)}
-
-/* hero */
-.hero{padding:64px 0 40px}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
-.hero-grid>*{min-width:0}
-@media(min-width:860px){.hero-grid{grid-template-columns:1.4fr 1fr;gap:56px}}
-.hero-text .tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;margin-bottom:20px}
-.hero h1{font-size:clamp(26px,5vw,46px);line-height:1.15;letter-spacing:-.02em;margin-bottom:18px;overflow-wrap:break-word;word-wrap:break-word;hyphens:auto}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero p.lead{font-size:clamp(15px,2.2vw,19px);color:var(--text-soft);max-width:680px;margin-bottom:28px;overflow-wrap:break-word}
-@media(max-width:520px){
-  .hero{padding:40px 0 24px}
-  .hero h1{font-size:23px;line-height:1.2}
-  .hero p.lead{font-size:15px}
-}
-.hero .usp{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
-.usp span{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:9px 12px;font-size:13px;color:var(--text-soft);display:flex;align-items:center;gap:6px}
-.usp svg{width:14px;height:14px;stroke:var(--accent);fill:none;stroke-width:2;flex-shrink:0}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap}
-.hero-photo{justify-self:center;position:relative}
-.hero-photo img{width:100%;max-width:240px;aspect-ratio:4/5;object-fit:cover;border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow);display:block}
-.hero-photo::before{content:'';position:absolute;inset:-10px;border-radius:28px;background:linear-gradient(135deg,var(--accent-soft),transparent 60%);z-index:-1}
-@media(min-width:860px){.hero-photo img{max-width:260px}}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .12s,box-shadow .12s}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 35%,transparent)}
-.btn-ghost{background:var(--card);color:var(--text);border-color:var(--border)}
-
-/* секции */
-section{padding:48px 0}
-.sec-head{margin-bottom:28px}
-.sec-head h2{font-size:clamp(22px,3.5vw,30px);letter-spacing:-.01em;margin-bottom:8px}
-.sec-head p{color:var(--text-soft);max-width:620px}
-
-/* услуги */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.svc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .12s}
-.svc:hover{border-color:var(--accent);transform:translateY(-1px)}
-.svc.active{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 35%,transparent) inset}
-.svc.active .ic{background:var(--accent)}
-.svc.active .ic svg{stroke:#fff}
-.svc .ic{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:12px;transition:background .15s}
-.svc .ic svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:2;transition:stroke .15s}
-.svc h3{font-size:16px;margin-bottom:6px;overflow-wrap:break-word}
-.svc p{font-size:14px;color:var(--text-soft);overflow-wrap:break-word}
-.svc .hint{display:inline-flex;align-items:center;gap:5px;margin-top:12px;font-size:12px;font-weight:600;color:var(--accent)}
-.svc .hint svg{width:13px;height:13px;stroke:var(--accent);fill:none;stroke-width:2.5}
-
-/* панель фильтра работ */
-.filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;align-items:center}
-.filter-bar .lbl{font-size:13px;color:var(--muted);font-weight:600;margin-right:4px}
-.fbtn{background:var(--card);border:1px solid var(--border);color:var(--text-soft);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:border-color .15s,color .15s,background .15s}
-.fbtn:hover{border-color:var(--accent);color:var(--text)}
-.fbtn.active{background:var(--accent);border-color:var(--accent);color:#fff}
-.filter-empty{display:none;text-align:center;padding:32px;color:var(--muted);font-size:15px}
-.filter-empty.show{display:block}
-
-/* кейсы */
-.case{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:0;margin-bottom:24px;overflow:hidden;box-shadow:var(--shadow)}
-.case.hidden{display:none}
-.case-img{width:100%;display:block;border-bottom:1px solid var(--border);background:var(--bg-soft)}
-.case-img.chat{width:100%;max-width:440px;margin:20px auto 0;border:1px solid var(--border);border-radius:12px;border-bottom:1px solid var(--border)}
-.case-cap{font-size:12px;color:var(--muted);padding:10px 24px 0;text-align:center}
-.case-head{padding:24px 24px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
-.case-num{font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.05em}
-.case h3{font-size:clamp(18px,2.8vw,22px);margin:6px 0 10px;letter-spacing:-.01em}
-.case .tags{display:flex;flex-wrap:wrap;gap:6px}
-.case .tags span{font-size:12px;background:var(--bg-soft);color:var(--text-soft);border:1px solid var(--border);border-radius:8px;padding:4px 9px}
-.case-body{padding:18px 24px 24px;display:grid;grid-template-columns:1fr;gap:14px}
-.case-row{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start}
-.case-row .lbl{font-size:13px;font-weight:600;color:var(--accent);padding-top:2px}
-.case-row .val{font-size:15px;color:var(--text-soft);overflow-wrap:break-word}
-.case-row .val b{color:var(--text);font-weight:600}
-@media(max-width:560px){.case-row{grid-template-columns:1fr;gap:4px}.case-row .lbl{padding-top:0}}
-
-/* контакты */
-.contact{background:linear-gradient(135deg,var(--accent-soft),var(--bg-soft));border:1px solid var(--border);border-radius:var(--radius);padding:36px;text-align:center;overflow:hidden}
-@media(max-width:520px){.contact{padding:24px 16px}}
-.contact h2{font-size:clamp(22px,3.5vw,30px);margin-bottom:10px}
-.contact p{color:var(--text-soft);max-width:520px;margin:0 auto 24px}
-.contact .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-a.contact-link{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);color:var(--text);text-decoration:none;padding:12px 20px;border-radius:12px;font-weight:600;font-size:15px}
-a.contact-link:hover{border-color:var(--accent);transform:translateY(-1px)}
-a.contact-link svg{width:18px;height:18px}
-.contact-form{display:none;margin-top:18px;max-width:520px;margin-left:auto;margin-right:auto;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:var(--shadow);text-align:left}
-.contact-form.show{display:block;animation:pop .25s ease}
-.contact-form-title{margin:0 0 12px;font-size:15px;color:var(--text);font-weight:600}
-.contact-form-row{display:flex;gap:8px;flex-wrap:wrap;flex-direction:column}
-.contact-input{padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font:inherit;font-size:15px;width:100%}
-.contact-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
-.contact-textarea{resize:vertical;min-height:72px;font-family:inherit}
-.contact-submit{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:12px 20px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;transition:transform .12s,box-shadow .12s;width:100%}
-.contact-submit:hover{transform:translateY(-1px);box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 35%,transparent)}
-.contact-form-note{margin:10px 0 0;font-size:13px;color:var(--text-soft)}
-.contact-form-note.ok{color:#2ea043;font-weight:600}
-.contact-form-note.err{color:#d1242f;font-weight:600}
-@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-
-footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-
-.fade{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
-.fade.in{opacity:1;transform:none}
-</style>
+<meta name="twitter:title" content="Михаил — ИИ-фриланс для бизнеса и маркетплейсов">
+<meta name="twitter:description" content="Чат-боты, дашборды WB/Ozon, лендинги и автоматизация. Демо до сдачи, срок 1–7 дней.">
+<meta name="twitter:image" content="https://zolmy.ru/img/series2/scene-hero.webp">
+<link rel="canonical" href="https://zolmy.ru/">
+<link rel="stylesheet" href="style.css?v=20261016">
 </head>
 <body>
 
+
 <header class="nav">
   <div class="wrap nav-in">
-    <div class="brand"><span class="dot"></span>Михаил<small>· ИИ-фриланс</small></div>
-    <nav class="nav-links" aria-label="Разделы портфолио">
-    </nav>
-    <button class="theme-btn" onclick="toggleTheme()" aria-label="Переключить тему">
-      <span id="themeIcon">🌙</span><span id="themeText">Тёмная</span>
-    </button>
+    <a class="brand" href="index.html"><span class="dot"></span>МИХАИЛ <small>· ИИ-инженерия для бизнеса</small></a>
+    <a class="theme-btn" href="#" onclick="event.preventDefault();toggleTheme()" aria-label="Переключить тему">
+      <span id="themeIcon">☀️</span><span id="themeText">Светлая</span>
+    </a>
   </div>
 </header>
 
 <div class="wrap">
+  <!-- 1. хироу -->
   <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="img/series2/scene-hero.webp" alt="" width="1536" height="1024" fetchpriority="high">
+    </div>
     <div class="hero-grid">
       <div class="hero-text">
-        <span class="tag fade">Доступно для заказов</span>
-        <h1 class="fade">Контент, лендинги, дашборды и&nbsp;чат-боты <em>под вашу задачу</em></h1>
-        <p class="lead fade">Делаю результат, который работает: продающие карточки и описания для маркетплейсов, лендинги под оффер, дашборды по продажам, чат-боты, посты для соцсетей и SEO-аудиты сайтов. Работаю с нейросетями и обязательной ручной редактурой — без шаблонщины и ИИ-воды.</p>
+        <h1 class="fade"><em>ИИ-автоматизация</em>, выверенная многолетним бизнесом</h1>
+        <p class="lead fade">Ответ за секунды. Утренняя сводка — без вашего участия. Демо до сдачи, срок от 1 до 7 дней. Ассистенты, отчёты, автоматизации и проверка ИИ-проектов.</p>
         <div class="usp fade">
-          <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Опыт селлера WB/Ozon</span>
-          <span><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Нейросети + ручная редактура</span>
-          <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Срок 1–7 дней</span>
+          <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Каждая работа показана вживую, не на словах</span>
+          <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Локальный ИИ: данные компании не покидают компьютер</span>
+          <span><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Нейросеть ускоряет — проверка остаётся ручной</span>
         </div>
         <div class="cta-row fade">
+          <a class="btn btn-cta" href="#contact">Обсудить вашу задачу</a>
         </div>
       </div>
       <div class="hero-photo fade">
-        <img src="IMG_0630.jpeg" alt="Михаил — ИИ-фрилансер, селлер WB/Ozon" fetchpriority="high">
+        <div class="pphoto">
+          <img src="IMG_0630.jpeg" alt="Михаил — ИИ-инженер: ассистенты, дашборды, автоматизация" fetchpriority="high" width="520" height="650">
+        </div>
+        <span class="glow" aria-hidden="true"></span>
       </div>
     </div>
   </section>
 
-  <section>
+  <div class="thread" aria-hidden="true"></div>
+
+  <!-- полоска сертификатов: маленькие превьюшки, клик разворачивает.
+       Чтобы добавить новый сертификат: положить картинку в img/сертификаты/
+       и скопировать любую строку ниже, поправить имя файла и подпись. -->
+  <section id="certs">
+    <div class="certs" role="list" aria-label="Сертификаты">
+      <button class="cert fade" role="listitem" data-full="img/сертификаты/zerocoder-claude-code.png"
+              aria-label="Сертификат № 42390: Вайб-кодинг на Claude Code, 36 часов, 22.08.2026">
+        <img src="img/сертификаты/zerocoder-claude-code.png" alt="Сертификат № 42390 — Вайб-кодинг на Claude Code" loading="lazy">
+      </button>
+      <button class="cert fade" role="listitem" data-full="img/сертификаты/zerocoder-intensive.png"
+              aria-label="Сертификат № 43163: интенсив по вайб-кодингу, 12.09.2026">
+        <img src="img/сертификаты/zerocoder-intensive.png" alt="Сертификат № 43163 — интенсив по вайб-кодингу" loading="lazy">
+      </button>
+    </div>
+  </section>
+
+  <div class="thread" aria-hidden="true"></div>
+
+  <!-- 2. ролик -->
+  <section id="video">
     <div class="sec-head fade">
-      <h2>Что делаю</h2>
-      <p>Шесть направлений — от текстов для карточек до чат-ботов. Каждый закрыт готовым рабочим процессом.</p>
+      <h2>Что я собираю — за две минуты</h2>
+      <p>Запись экрана без лица: живой запуск ассистента с базой знаний и дашборда.</p>
     </div>
-    <div class="services">
-      <div class="svc fade" data-theme="cards" onclick="filterWorks('cards',this)"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h3>Карточки и SEO</h3><p>Продающие описания и инфографика для WB/Ozon под формат площадки.</p><span class="hint"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Смотреть работы</span></div>
-      <div class="svc fade" data-theme="posts" onclick="filterWorks('posts',this)"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Посты для соцсетей</h3><p>Telegram, ВК, Instagram — серии постов под бренд и тон.</p><span class="hint"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Смотреть работы</span></div>
-      <div class="svc fade" data-theme="landing" onclick="filterWorks('landing',this)"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Лендинги</h3><p>Одностраничники и сайт-визитки под оффер. Работают на телефоне.</p><span class="hint"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Смотреть работы</span></div>
-      <div class="svc fade" data-theme="dashboards" onclick="filterWorks('dashboards',this)"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h3>Дашборды</h3><p>Интерактивная аналитика продаж: KPI, фильтры, графики, экспорт.</p><span class="hint"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Смотреть работы</span></div>
-      <div class="svc fade" data-theme="bots" onclick="filterWorks('bots',this)"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22h6M9 6h6"/></svg></div><h3>Чат-боты</h3><p>Telegram/ВК: автоответы, заявки, база знаний, нейросеть.</p><span class="hint"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Смотреть работы</span></div>
-      <div class="svc fade" data-theme="seo" onclick="filterWorks('seo',this)"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>SEO-аудит</h3><p>Разбор сайта со скриншотами и понятным чек-листом правок.</p><span class="hint"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Смотреть работы</span></div>
+    <div class="video-box fade">
+      <video controls preload="metadata" poster="videos/poster-zolmy-video.jpg?v=3" playsinline>
+        <source src="videos/zolmy-video-2min.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео — напишите, пришлю файлом.
+      </video>
     </div>
   </section>
 
-  <section id="cases">
+  <div class="thread" aria-hidden="true"></div>
+
+  <!-- 3. витрина 6 кейсов -->
+  <section id="vitrina">
     <div class="sec-head fade">
-      <h2>Работы</h2>
-      <p>Демонстрационные проекты и работы из практики — каждый можно посмотреть вживую или открыть код. Нажми на тему выше, чтобы отфильтровать.</p>
+      <h2>Витрина работ</h2>
+      <p>Шесть живых систем. На превью — демо-данные; реальные показываю при обсуждении вашей задачи.</p>
     </div>
-
-    <div class="filter-bar fade">
-      <span class="lbl">Тема:</span>
-      <button class="fbtn" data-theme="cards" onclick="filterWorks('cards',this)">Карточки и SEO</button>
-      <button class="fbtn" data-theme="posts" onclick="filterWorks('posts',this)">Посты</button>
-      <button class="fbtn" data-theme="landing" onclick="filterWorks('landing',this)">Лендинги</button>
-      <button class="fbtn" data-theme="dashboards" onclick="filterWorks('dashboards',this)">Дашборды</button>
-      <button class="fbtn" data-theme="bots" onclick="filterWorks('bots',this)">Чат-боты</button>
-      <button class="fbtn" data-theme="seo" onclick="filterWorks('seo',this)">SEO-аудит</button>
+    <div class="vitrina">
+      <a class="plaque vcase--bot fade" href="ai.html" aria-label="Кейс: ассистент с базой знаний">
+        <div class="pmedia"><img src="shots/vitrina/k1-assistent.png" alt="Ассистент с базой знаний: терминал с вопросом, ответом и источниками" loading="lazy"></div>
+        <div class="pbody"><h3>Ассистент с базой знаний</h3><p>Отвечает по документам компании, каждый ответ — со ссылкой на источник, чего нет — честно откажется.</p>
+          <span class="hint">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="plaque vcase--dash fade" href="dashboardy.html" aria-label="Кейс: дашборд продаж WB">
+        <div class="pmedia"><img src="shots/vitrina/k2-dashbord.png" alt="Дашборд продаж Wildberries на демо-данных" loading="lazy"></div>
+        <div class="pbody"><h3>Дашборд продаж WB</h3><p>Отчёт из кабинета в наглядные цифры: выручка, прибыль, окупаемость рекламы, остатки. Один файл, без серверов.</p>
+          <span class="hint">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <div class="plaque vcase--price fade">
+        <a class="pmedia" href="raboty.html" aria-label="Кейс: радар цен конкурентов"><img src="shots/vitrina/k3-radare-cen.png" alt="Радар цен конкурентов на демо-данных" loading="lazy"></a>
+        <div class="pbody"><h3>Радар цен конкурентов</h3><p>Пары «мой товар × конкурент» с открытой витрины WB — видно, кто дешевле и насколько.</p>
+          <div class="pactions"><a class="hint" href="raboty.html">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="ghb" href="https://github.com/ZolotarevMikhail/seller-price-radar-mvp" target="_blank" rel="noopener">Код на GitHub</a></div></div>
+      </div>
+      <div class="plaque vcase--kp fade">
+        <a class="pmedia" href="programmy.html" aria-label="Кейс: заявка в КП"><img src="shots/vitrina/k4-zayavki-kp.png" alt="Система заявок в КП на демо-данных" loading="lazy"></a>
+        <div class="pbody"><h3>Заявки → КП для производств</h3><p>Заявка любым письмом, фото, PDF — в готовое КП по вашему прайсу; цену считает код, а не нейросеть.</p>
+          <div class="pactions"><a class="hint" href="programmy.html">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="ghb" href="https://github.com/ZolotarevMikhail/ai-zayavki-kp" target="_blank" rel="noopener">Код на GitHub</a></div></div>
+      </div>
+      <div class="plaque vcase--zavod fade">
+        <a class="pmedia" href="zavod.html" aria-label="Кейс: контент-завод"><img src="shots/vitrina/k5-kontent-zavod.png" alt="Контент-завод на демо-данных" loading="lazy"></a>
+        <div class="pbody"><h3>Контент-завод</h3><p>Темы находит сам, пост пишет под ваш тон — публикует только человек, двумя кнопками.</p>
+          <div class="pactions"><a class="hint" href="zavod.html">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="ghb" href="https://github.com/ZolotarevMikhail/content-zavod" target="_blank" rel="noopener">Код на GitHub</a></div></div>
+      </div>
+      <div class="plaque vcase--svod fade">
+        <a class="pmedia" href="chatboty.html" aria-label="Кейс: утренняя сводка WB/Ozon"><img src="shots/vitrina/k6-svodka.png" alt="Утренняя сводка WB/Ozon на демо-данных" loading="lazy"></a>
+        <div class="pbody"><h3>Утренняя сводка WB/Ozon</h3><p>К 10:00 в Telegram: выручка, заказы, тревожные остатки — кабинет открывать не нужно.</p>
+          <div class="pactions"><a class="hint" href="chatboty.html">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="ghb" href="https://github.com/ZolotarevMikhail/wb-morning-bot" target="_blank" rel="noopener">Код на GitHub</a></div></div>
+      </div>
+      <a class="plaque vcase--prov vcase-wide fade" href="raboty.html?theme=vcheck" aria-label="Серия кейсов: проверка чужого вайб-кода">
+        <div class="pmedia"><img src="shots/vitrina/k7-proverka.png" alt="Проверка чужой ИИ-сборки: отчёт с находками по критичности" loading="lazy"></div>
+        <div class="pbody"><h3>Проверка вайбкодинг-работы</h3><p>Смотрю сборку, которую сделал нейросетью другой исполнитель: секреты и данные, надёжность при сбоях, лимиты API. Отчёт — коротким списком: что чинить до сдачи, что потом, что можно оставить. Три разборных кейса — под плашкой.</p>
+          <span class="hint">Смотреть три кейса <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
     </div>
-
-    <div class="filter-empty" id="filterEmpty">Пока нет работ в этой теме. Загляните позже — раздел наполняется.</div>
-
-    <!-- КЕЙС 1 -->
-    <article class="case fade" data-theme="dashboards">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 01 · АНАЛИТИКА</div>
-          <h3>Интерактивный дашборд продаж</h3>
-        </div>
-        <div class="tags"><span>HTML/CSS/JS</span><span>Без библиотек</span><span>CSV-импорт</span></div>
-      </div>
-      <img class="case-img" src="shots/dashboard.png" alt="Скриншот дашборда продаж: KPI-карточки, графики, фильтры" loading="lazy">
-      <div class="case-cap">Так выглядит дашборд вживую — один файл, открывается в браузере.</div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Показать продажи компании на одном экране: выручка, заявки, конверсия, средний чек — с фильтрами по периоду, каналу, продукту, менеджеру, региону.</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val"><b>8 KPI-карточек</b>, 6 фильтров, 5 графиков (динамика, каналы, менеджеры, продукты, регионы), таблица с сортировкой, авто-резюме. <b>Загрузка и экспорт CSV.</b> Один файл — работает без интернета и внешних библиотек.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val">Руководитель видит все ключевые цифры на одном экране, фильтрует под задачу и выгружает срез. Готов к подключению реальных данных клиента.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude, чистый JavaScript, SVG-графики. Применимо к аналитике продаж WB/Ozon.</div></div>
-      </div>
-    </article>
-
-    <!-- КЕЙС 2 -->
-    <article class="case fade" data-theme="bots">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 02 · ЧАТ-БОТЫ</div>
-          <h3>Чат-бот поддержки для ВКонтакте</h3>
-        </div>
-        <div class="tags"><span>Python</span><span>GigaChat</span><span>SQLite</span></div>
-      </div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Бот для отдела продаж в ВК: отвечать на типовые вопросы клиентов, собирать статистику, сложные — переводить на менеджера.</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Ответы на <b>5 тем</b> (продукты, цены, скидки, доставка, статус заказа) по базе знаний. Нейросеть — для нестандартных, с удержанием от выдумок: <b>не придумывает цены и сроки</b>, переводит на менеджера. Статистика в SQLite, автотесты.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val">Типовые вопросы закрываются за миллисекунды, сложные — через нейросеть до 3 секунд. Менеджер разгружен от рутины.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, VK Long Poll, GigaChat. Архитектура переносится на Telegram.</div></div>
-      </div>
-    </article>
-
-    <!-- КЕЙС 3 -->
-    <article class="case fade" data-theme="landing">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 03 · ЛЕНДИНГИ</div>
-          <h3>Сайт-визитка и MVP-лендинг</h3>
-        </div>
-        <div class="tags"><span>HTML/CSS/JS</span><span>Адаптив</span><span>Анимации</span></div>
-      </div>
-      <img class="case-img" src="shots/landing.png" alt="Скриншот лендинга: Hero, услуги, форма заявки" loading="lazy">
-      <div class="case-cap">Лендинг под оффер — открывается на телефоне и компьютере.</div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Одностраничник под оффер: Hero, Услуги, Преимущества, Заявка, Контакты. Должен работать на телефоне и быть готовым к публикации.</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Собрал спецификацию (оффер, аудитория, стиль, CTA) и <b>готовый index.html</b>: 5 секций, плавные появления при скролле, рабочее мобильное меню, форма с подтверждением. Один файл, без внешних зависимостей.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val">Сайт открывается двойным кликом, адаптив под телефон, готов к размещению на любом хостинге. Пометки TODO — куда подставить контакты клиента.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude, семантический HTML, CSS Grid/Flex, нативный JS.</div></div>
-      </div>
-    </article>
-
-    <!-- КЕЙС 4 -->
-    <article class="case fade" data-theme="seo">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 04 · SEO</div>
-          <h3>SEO-аудит реального сайта</h3>
-        </div>
-        <div class="tags"><span>Playwright</span><span>Скриншоты</span><span>Чек-лист</span></div>
-      </div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Разобрать сайт: что мешает поиску и конверсии, что улучшить — понятным языком, с доказательствами.</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Открыл сайт через автоматизацию, сделал <b>скриншоты desktop и mobile</b>, проверил заголовки (title, H1), мета-описания, alt картинок, мобильную версию, ошибки консоли. Собрал отчёт в Markdown: <b>проблема → почему важно → что сделать</b>.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val">Документ, который можно читать без технических знаний, с чётким чек-листом правок для разработчика или владельца сайта.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude, Playwright (снимок сайта и консоль), Markdown.</div></div>
-      </div>
-    </article>
-
-    <!-- КЕЙС 5 -->
-    <article class="case fade" data-theme="posts">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 05 · КОНТЕНТ</div>
-          <h3>Посты для соцсетей из источника</h3>
-        </div>
-        <div class="tags"><span>Telegram</span><span>ВК</span><span>Instagram</span></div>
-      </div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Превратить статью/новость в короткие посты для трёх соцсетей — с пользой для аудитории, без прямой рекламы.</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Из источника собрал <b>три поста</b> (Telegram, ВК, Instagram) в едином тоне, с призывом к действию и хештегами под площадку. Формат JSON + Markdown — можно копировать и вставлять. Промпт для генерации картинки.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val">Готовая серия постов под формат каждой соцсети, без выдуманных фактов — спорные места отмечены для уточнения.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude, рабочий процесс для контента из любого источника.</div></div>
-      </div>
-    </article>
-
-    <!-- КЕЙС 6 -->
-    <article class="case fade" data-theme="cards">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 06 · КАРТОЧКИ / SEO</div>
-          <h3>Продающее SEO-описание карточки Wildberries</h3>
-        </div>
-        <div class="tags"><span>WB</span><span>SEO-текст</span><span>1000–1500 символов</span></div>
-      </div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Продающее SEO-описание <b>1000–1500 символов</b> для массажного валика-роллера «СпинаОк». ЦА — офисные работники 25–45 лет с болью в спине. Нужно вписать 3 ключа: «массажёр для спины», «валик массажный», «роллер для спины».</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Черновик через Claude → <b>ручная редактура</b> под бренд и ЦА: убрал «ИИ-шаблонщину», добавил блок «как пользоваться за 5 минут». Три ключа вписаны <b>естественно, по одному разу, в разных падежах</b>. Характеристики взяты из данных клиента (TPE, 33×14 см, 750 г) — без выдуманных фактов.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val"><b>1014 символов</b> — попадает в ТЗ 1000–1500. Все 3 ключа вписаны, текст читается как написанный человеком. Готов к вставке в карточку WB.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude + ручная редактура. Процесс применим к карточкам WB/Ozon в любой нише.</div></div>
-      </div>
-    </article>
-
-    <!-- КЕЙС 7 -->
-    <article class="case fade hidden" data-theme="dashboards">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 07 · АНАЛИТИКА</div>
-          <h3>Дашборд продаж Wildberries</h3>
-        </div>
-        <div class="tags"><span>HTML/CSS/JS</span><span>WB API</span><span>Без CDN</span><span>Свет/тьма</span></div>
-      </div>
-      <img class="case-img" src="shots/dashboard-wb-dark.png" alt="Дашборд продаж Wildberries: KPI-карточки, графики, прибыль по товарам, остатки — тёмная тема" loading="lazy">
-      <div class="case-cap">Дашборд WB — тёмная тема. Та же версия поддерживает светлую. Скриншот откроется на полный экран по клику.</div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Селлер спортивных товаров на WB <b>каждое утро за минуту</b> хочет видеть реальную картину: выручку, прибыль после комиссий и рекламы, что заказывают, что заканчивается на складе. Сейчас цифры разбросаны по вкладкам личного кабинета WB — сводить вручную некогда.</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val"><b>6 KPI-плиток</b>: выручка (с возвратами), заказы, прибыль, ROI рекламы, остатки, возвраты. <b>4 графика</b>: динамика выручки/заказов/прибыли по периоду, расходы и отдача на рекламу, прибыль по товарам (рейтинг «кто зарабатывает — кто тянет вниз»), остатки по товарам. <b>Фильтры</b>: период (год/месяц/неделя/день + произвольные даты), тип товара. Одна кнопка <b>«Обновить»</b> — тянет свежие данные из API WB по требованию. <b>Экспорт в CSV</b> текущего среза. <b>Светлая и тёмная тема</b>. Авто-резюме по периоду. Таблица товаров с сортировкой.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val">Один HTML-файл, открывается двойным кликом. <b>Работает офлайн</b>, без CDN и внешних библиотек — графики на чистом SVG/JS. <b>Демо-данные</b> внутри файла: дашборд сразу показывает графики и KPI без настройки — можно оценить интерфейс. WB-токен хранится только в local браузера клиента, никогда не уходит в код. Готов к подключению реального кабинета селлера (режим «лайв-браузер»).</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), HTML/CSS/JS, API Wildberries (продажи, заказы, остатки, комиссии, реклама), SVG-графики. Архитектура применима и к Ozon — для другой структуры комиссий и остатков.</div></div>
-      </div>
-      <div style="padding:0 24px 20px">
-        <a class="btn btn-primary" href="../отчеты/wb-dashboard-misha/index.html" target="_blank" rel="noopener">Открыть демо</a>
-      </div>
-    </article>
-
-    <!-- КЕЙС 8 -->
-    <article class="case fade hidden" data-theme="dashboards">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 08 · АНАЛИТИКА</div>
-          <h3>Seller Price Radar — цены конкурентов на Wildberries</h3>
-        </div>
-        <div class="tags"><span>HTML/CSS/JS</span><span>Адаптив</span><span>Демо онлайн</span></div>
-      </div>
-      <img class="case-img" src="shots/price-radar.png" alt="Дашборд Seller Price Radar: пары «мой товар × конкурент», Δ% и авто-выводы" loading="lazy">
-      <div class="case-cap">Сравнение цен парами «мой товар × конкурент» — Δ% и автоматические выводы. Живое демо — по кнопке ниже.</div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Селлеру WB нужно видеть, где его цена ниже конкурента, а где конкурент обходит его — по парам товаров-аналогов, а не «в среднем по полке».</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Дашборд одним HTML-файлом: <b>сопоставление пар</b> с цветовой маркировкой (🟢 мы дешевле / 🔴 конкурент дешевле), живые фильтры (товар, конкурент, порог %), <b>авто-выводы</b> по критичным расхождениям, загрузка среза JSON/CSV, средняя по конкурентам. Без библиотек и CDN, адаптив от 400 px.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val">Открывается двойным кликом и сразу показывает демо-данные. <b>Демо доступно онлайн</b> — можно показать заказчику без установки.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), чистый JavaScript, SVG, GitHub Pages для демо.</div></div>
-      </div>
-      <div style="padding:0 24px 20px">
-        <a class="btn btn-primary" href="https://zolotarevmikhail.github.io/seller-price-radar-mvp/" target="_blank" rel="noopener">Открыть демо</a>
-      </div>
-    </article>
-
-    <!-- КЕЙС 9 -->
-    <article class="case fade hidden" data-theme="bots">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 09 · ЧАТ-БОТЫ</div>
-          <h3>Бот-розыгрыш для сообществ ВКонтакте</h3>
-        </div>
-        <div class="tags"><span>Python</span><span>VK API</span><span>SQLite</span><span>Работа 24/7</span></div>
-      </div>
-      <!-- СКРИНЫ: когда файлы будут добавлены в Freelancer/Chatbot/vk-giveaway-bot/скрины/,
-           заменить плейсхолдер ниже на:
-           <img class="case-img" src="../Chatbot/vk-giveaway-bot/скрины/ИМЯ-ФАЙЛА.png" alt="..." loading="lazy">
-           <div class="case-cap">Подпись к скриншоту.</div>
-           (Для публикации на zolmy.ru скрин лучше скопировать в папку shots/ рядом с index.html
-            и указать src="shots/ИМЯ-ФАЙЛА.png") -->
-      <img class="case-img chat" src="shots/uchastie.png" alt="Диалог с ботом-розыгрышем ВК: приветствие, кнопка «Участвовать», подтверждение участия и защита от повторов" loading="lazy">
-      <div class="case-cap">Участие по кнопке — повторно зарегистрироваться нельзя</div>
-      <img class="case-img chat" src="shots/admin.png" alt="Админ-команды бота: статус розыгрыша и выбор случайного победителя со ссылкой на профиль" loading="lazy">
-      <div class="case-cap">Админ-команды: статус розыгрыша и случайный победитель</div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Бот-розыгрыш (giveaway) для сообществ ВКонтакте: участник нажимает <b>«Участвовать»</b> в сообщениях сообщества, бот проверяет подписки, а в конце честно выбирает победителя. Организатору не нужно вручную собирать участников и следить за честностью.</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Участие по кнопке «Участвовать». <b>Проверка подписки сразу на несколько сообществ</b> — работает для совместных розыгрышей. <b>Защита от накруток</b>: один человек — одно участие, повторно пройти нельзя. Случайный выбор победителя <b>со ссылкой на профиль</b>. Дата окончания розыгрыша и сброс раунда <b>в один клик</b>. Все участники хранятся в базе данных (SQLite). Работа 24/7: при сбоях связи бот <b>сам переподключается</b>.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val">Рабочий MVP: собран и <b>проверен вживую на тестовом сообществе ВКонтакте</b>. <b>12 локальных тестов пройдены</b> до запуска. Организатор розыгрыша избавлен от ручного сбора участников, проверки подписок и споров о честности — победителя выбирает случай, а не рука.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, VK API (Long Poll), SQLite. Архитектура переносится на другие механики ботов для сообществ.</div></div>
-      </div>
-      <div style="padding:0 24px 20px">
-        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/vk-giveaway-bot" target="_blank" rel="noopener">Открыть код на GitHub</a>
-      </div>
-    </article>
-
-    <!-- КЕЙС 10 -->
-    <article class="case fade hidden" data-theme="bots">
-      <div class="case-head">
-        <div>
-          <div class="case-num">КЕЙС 10 · ЧАТ-БОТЫ</div>
-          <h3>Реферальный бот-привратник для Telegram</h3>
-        </div>
-        <div class="tags"><span>Python</span><span>Postback</span><span>SQLite</span><span>Автотесты</span></div>
-      </div>
-      <div class="case-body">
-        <div class="case-row"><div class="lbl">Задача</div><div class="val">Впускать в приватную Telegram-группу <b>только тех, кто выполнил условие</b> в партнёрской системе — автоматически, без ручной проверки. Проект из практики: собственный прототип, который можно подключить к любой партнёрке или продаже доступов.</div></div>
-        <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Пользователь заходит по ссылке с <b>уникальным кодом</b> — бот запоминает пару «код ↔ пользователь». Партнёрская система присылает <b>postback</b> (авто-уведомление через встроенный веб-сервер бота) — бот выдаёт <b>одноразовую ссылку-приглашение</b> в группу. <b>Защита от повторной выдачи</b>: каждая выдача фиксируется в базе, дубль не пройдёт. Ручная выдача админом командой <b>/grant</b>, выбор группы командой <b>/setgroup</b> прямо в чате — без правки конфигов. Опциональный секрет в postback — защита от подделки заявок. Токен и настройки — в отдельном файле, в коде их нет. Логика проверена <b>9 автотестами</b>.</div></div>
-        <div class="case-row"><div class="lbl">Результат</div><div class="val">Рабочий бот-привратник: весь цикл «ссылка → оплата/действие → доступ в группу» идёт без человека. Хранение в одном файле базы — никаких внешних сервисов, развёртывается на недорогом сервере. Готов как <b>шаблон под заказ клиента</b>: под любую партнёрскую систему с postback.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), Python, pyTelegramBotAPI, SQLite, встроенный HTTP-сервер.</div></div>
-      </div>
-      <div style="padding:0 24px 20px">
-        <a class="btn btn-primary" href="https://github.com/ZolotarevMikhail/telegram-referal-bot" target="_blank" rel="noopener">Открыть код на GitHub</a>
-      </div>
-    </article>
-
   </section>
 
+  <div class="thread" aria-hidden="true"></div>
+
+  <!-- 4. направления: прежние плашки, компактная пропорция -->
+  <section id="directions">
+    <div class="sec-head fade">
+      <h2>Направления</h2>
+      <p>Семь направлений, где ИИ уже экономит деньги. Внутри — живые работы и как это устроено.</p>
+    </div>
+    <div class="direc">
+      <a class="plaque plaque--bot fade" href="chatboty.html">
+        <span class="corner">ЧАТ-БОТЫ</span>
+        <div class="pmedia"><img width="1536" height="1024" src="img/series2/scene-bot.webp" alt="Обложка: стайка чат-ботов вокруг главного жёлтого бота" loading="lazy"></div>
+        <div class="pbody"><h3>Ассистенты и боты</h3><p>Живые ассистенты, а не шаблоны: отвечают клиентам, ведут розыгрыши, передают менеджеру сложное.</p>
+          <span class="hint">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="plaque plaque--aimpl fade" href="ai.html">
+        <span class="corner">AI-ИНТЕГРАЦИЯ</span>
+        <div class="pmedia"><img width="1536" height="1024" src="img/series2/scene-ai.webp" alt="Обложка: светящийся нейромозг соединён нитями с чат-баблом, графикой, документом и коробками" loading="lazy"></div>
+        <div class="pbody"><h3>AI-интеграция</h3><p>Нейросеть внутри вашей рабочей задачи: разговаривает с клиентами, пересказывает новости, готовит планы.</p>
+          <span class="hint">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="plaque plaque--dash fade" href="dashboardy.html">
+        <span class="corner">ДАШБОРДЫ</span>
+        <div class="pmedia"><img width="1536" height="1024" src="img/series2/scene-dash.webp" alt="Обложка: парящие панели дашборда с графиками продаж" loading="lazy"></div>
+        <div class="pbody"><h3>Дашборды и анализ</h3><p>Продажи, остатки и цены конкурентов — на одном экране, без ручных сводок.</p>
+          <span class="hint">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="plaque plaque--site fade" href="landingi.html">
+        <span class="corner">САЙТЫ</span>
+        <div class="pmedia"><img width="1536" height="1024" src="img/series2/scene-site.webp" alt="Обложка: страница собирается из светящихся блоков" loading="lazy"></div>
+        <div class="pbody"><h3>Сайты и лендинги</h3><p>Страница под конкретный оффер: быстро грузится, работает на телефоне, ведёт к заявке.</p>
+          <span class="hint">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="plaque plaque--zavod fade" href="zavod.html">
+        <span class="corner">КОНТЕНТ-ЗАВОД</span>
+        <div class="pmedia"><img width="1536" height="1024" src="img/series2/scene-zavod.webp" alt="Обложка: станок штампует карточки на светящемся конвейере" loading="lazy"></div>
+        <div class="pbody"><h3>Конвейер публикаций</h3><p>Статьи и новости превращаются в посты для соцсетей по одной отлаженной линии.</p>
+          <span class="hint">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="plaque plaque--media fade" href="media.html">
+        <span class="corner">ИЗОБРАЖЕНИЕ / ВИДЕО</span>
+        <div class="pmedia"><img width="1536" height="1024" src="img/media-mini-keyboard.webp" alt="Обложка: крошечные человечки на клавиатуре перед монитором START TEST" loading="lazy"></div>
+        <div class="pbody"><h3>Изображения и видео</h3><p>Картинки и короткие ролики по вашему описанию — до готового файла с музыкой и титрами.</p>
+          <span class="hint">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="plaque plaque--tools fade" href="programmy.html">
+        <span class="corner">ПРОГРАММЫ</span>
+        <div class="pmedia"><img width="1536" height="1024" src="img/series2/scene-tools.webp" alt="Обложка: колокольчик, ключ и документ в стеклянных панелях" loading="lazy"></div>
+        <div class="pbody"><h3>Программы под задачу</h3><p>Небольшие инструменты, которые снимают рутину: напоминания, учёт, документы — один файл.</p>
+          <span class="hint">Смотреть работы <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>    </div>
+  </section>
+
+  <div class="thread" aria-hidden="true"></div>
+
+  <!-- как работаю (перенесено без переделки) -->
+  <section id="how">
+    <div class="sec-head fade">
+      <h2>Как работаю</h2>
+      <p>Три понятных шага — вы всегда знаете, что происходит с задачей.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade"><div class="n">1</div><h3>Обсуждаем задачу</h3><p>В Telegram, ВК, письмом или звонком. Коротко описываете задачу — называете, что нужно получить. Разбираем, окупится ли решение.</p></div>
+      <div class="step fade"><div class="n">2</div><h3>Видите демо до сдачи</h3><p>Делаю рабочую демо-версию на условных данных или MVP — вы смотрите вживую и говорите правки, до того как работа сдана.</p></div>
+      <div class="step fade"><div class="n">3</div><h3>Сдача и инструкция</h3><p>Готовый результат + инструкция по запуску простыми словами. Сборка открытая (код на GitHub), поддержка после сдачи — по договорённости.</p></div>
+    </div>
+  </section>
+
+  <div class="thread" aria-hidden="true"></div>
+
+  <!-- контакты (перенесено без переделки) -->
   <section id="contact">
     <div class="contact fade">
       <h2>Готов обсудить вашу задачу</h2>
@@ -458,46 +241,44 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </a>
       </div>
 
-      <!-- Telegram -->
       <div class="contact-form" id="formTelegram">
         <p class="contact-form-title">Напишите сообщение — отвечу в Telegram.</p>
         <form class="contact-form-row" onsubmit="return submitTelegram(event)">
           <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
           <textarea id="tgMessage" rows="4" placeholder="Здравствуйте! Хочу обсудить задачу..." class="contact-input contact-textarea" required></textarea>
           <button type="submit" class="contact-submit">Отправить</button>
+          <p class="consent-n">Нажимая «Отправить», согласен на обработку данных из формы. <a href="privacy.html">Политика</a>.</p>
         </form>
       </div>
 
-      <!-- Email -->
       <div class="contact-form" id="formEmail">
         <p class="contact-form-title">Оставьте ваш email — отвечу письмом.</p>
         <form class="contact-form-row" onsubmit="return submitEmail(event)">
           <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
-          <input type="email" id="mailFrom" required placeholder="ваш@email.com"
-                 autocomplete="email" class="contact-input">
+          <input type="email" id="mailFrom" required placeholder="ваш@email.com" autocomplete="email" class="contact-input">
           <textarea id="mailTask" rows="3" placeholder="Коротко о задаче (необязательно)" class="contact-input contact-textarea"></textarea>
           <button type="submit" class="contact-submit">Отправить</button>
+          <p class="consent-n">Нажимая «Отправить», согласен на обработку данных из формы. <a href="privacy.html">Политика</a>.</p>
         </form>
       </div>
 
-      <!-- ВКонтакте -->
       <div class="contact-form" id="formVk">
-        <p class="contact-form-title">Напишите сообщение — отвечу в ВКонтакте.</p>
+        <p class="contact-form-title">Напишите сообщение — отвечу во ВКонтакте.</p>
         <form class="contact-form-row" onsubmit="return submitVk(event)">
           <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
           <textarea id="vkMessage" rows="4" placeholder="Здравствуйте! Хочу обсудить задачу..." class="contact-input contact-textarea" required></textarea>
           <button type="submit" class="contact-submit">Отправить</button>
+          <p class="consent-n">Нажимая «Отправить», согласен на обработку данных из формы. <a href="privacy.html">Политика</a>.</p>
         </form>
       </div>
 
-      <!-- Звонок -->
       <div class="contact-form" id="formCall">
         <p class="contact-form-title">Оставьте номер — перезвоню в течение часа.</p>
         <form class="contact-form-row" onsubmit="return submitCall(event)">
           <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
-          <input type="tel" id="callPhone" required placeholder="+7 (___) ___-__-__"
-                 pattern="[\+\d\s\-\(\)]{6,}" autocomplete="tel" class="contact-input">
+          <input type="tel" id="callPhone" required placeholder="+7 (___) ___-__-__" pattern="[\+\d\s\-\(\)]{6,}" autocomplete="tel" class="contact-input">
           <button type="submit" class="contact-submit">Отправить</button>
+          <p class="consent-n">Нажимая «Отправить», согласен на обработку данных из формы. <a href="privacy.html">Политика</a>.</p>
         </form>
       </div>
     </div>
@@ -506,171 +287,50 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <footer>
   <div class="wrap">
-    <span>Михаил · ИИ-фриланс для маркетплейсов</span>
-    <span>ИИ-фриланс для бизнеса и маркетплейсов</span>
+    <span>Михаил · ИИ-инженерия для бизнеса</span>
+    <span>GitHub: <a href="https://github.com/ZolotarevMikhail" style="color:inherit" target="_blank" rel="noopener">ZolotarevMikhail</a></span>
+    <span><a href="privacy.html" style="color:inherit">Политика конфиденциальности</a></span>
   </div>
 </footer>
 
+<script src="script.js"></script>
 <script>
-// Фильтрация работ по теме. theme — код темы ('all' чтобы показать все).
-// src — элемент-кнопка, на которую нажали (для подсветки).
-// Универсальный toggle-принцип: один клик — открыли все кейсы темы, второй — свернули лишние.
-// При первом открытии страницы видны 6 образцовых кейсов (по одному на тему).
-// При нажатии на тему — открываются ВСЕ её кейсы.
-// При повторном нажатии — снова видны только 6 образцовых (для «Дашборды» это КЕЙС 01, не КЕЙС 07).
-// theme: 'all' | 'cards' | 'posts' | 'landing' | 'dashboards' | 'bots' | 'seo'
-function filterWorks(theme,src){
-  const cases=document.querySelectorAll('#cases .case');
+// лайтбокс сертификатов: клик по превьюшке — большое изображение,
+// клик по тёмному полю или Esc — закрыть
+(function () {
+  const lightbox = document.createElement("div");
+  lightbox.id = "cert-lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-label", "Сертификат крупно");
+  lightbox.innerHTML = '<img id="cert-big" alt="Сертификат крупным планом">';
+  document.body.appendChild(lightbox);
 
-  // Какие кейсы должны быть видны «по умолчанию» для каждой темы.
-  // Номер кейса сравнивается по началу строки (startsWith), потому что в DOM хранится
-  // полный текст: «КЕЙС 01 · АНАЛИТИКА», а нам нужно только «КЕЙС 01».
-  const defaults={
-    dashboards: ['КЕЙС 01'],
-    bots:       ['КЕЙС 02'],
-    landing:    ['КЕЙС 03'],
-    seo:        ['КЕЙС 04'],
-    posts:      ['КЕЙС 05'],
-    cards:      ['КЕЙС 06'],
-  };
-  // Сводный «стартовый набор» — все образцовые сразу видны.
-  const allDefaults=Object.values(defaults).flat();
-
-  // Активна ли сейчас эта же тема (т.е. видны ВСЕ её кейсы, а не только образцовый)?
-  const visibleCases=Array.from(cases).filter(c=>!c.classList.contains('hidden'));
-  const themes=new Set(visibleCases.map(c=>c.getAttribute('data-theme')));
-  const activeTheme=(themes.size===1 && [...themes][0]===theme)?theme:null;
-
-  if(activeTheme===theme){
-    // Повторный клик — свернуть лишние, оставить только образцовые.
-    // Шаг 1: у видимых кейсов активной темы убираем те, что НЕ в дефолтах.
-    visibleCases.forEach(c=>{
-      const num=c.querySelector('.case-num')?.textContent.trim()||'';
-      const isDefault=allDefaults.some(d=>num.startsWith(d));
-      if(!isDefault)c.classList.add('hidden');
+  document.querySelectorAll(".cert").forEach(function (card) {
+    const pic = card.querySelector("img");
+    // картинка ещё не сохранена — карточка прячется, полоска не ломается
+    pic.addEventListener("error", function () { card.hidden = true; });
+    pic.addEventListener("load", function () { card.hidden = false; });
+    card.addEventListener("click", function () {
+      const big = document.getElementById("cert-big");
+      big.src = card.dataset.full;
+      lightbox.classList.add("open");
     });
-    // Шаг 2: возвращаем видимость образцовым кейсам других тем, которые могли
-    // быть скрыты первым кликом (когда фильтр раскрыл только активную тему).
-    cases.forEach(c=>{
-      const num=c.querySelector('.case-num')?.textContent.trim()||'';
-      const isDefault=allDefaults.some(d=>num.startsWith(d));
-      if(isDefault)c.classList.remove('hidden');
-    });
-  } else {
-    // Первый клик (или смена темы) — открыть все кейсы выбранной темы.
-    cases.forEach(c=>{
-      const match=(theme==='all'||c.getAttribute('data-theme')===theme);
-      c.classList.toggle('hidden',!match);
-    });
-  }
-
-  // Подсветка активной кнопки в панели фильтра.
-  document.querySelectorAll('.filter-bar .fbtn').forEach(b=>b.classList.toggle('active',b.getAttribute('data-theme')===theme && activeTheme!==theme));
-  // Подсветка активной карточки в разделе «Что делаю».
-  document.querySelectorAll('.svc').forEach(s=>s.classList.toggle('active',s.getAttribute('data-theme')===theme && activeTheme!==theme));
-  // Прокрутка к блоку работ, если нажали карточку услуги.
-  if(src&&src.classList.contains('svc')){
-    document.getElementById('cases').scrollIntoView({behavior:'smooth',block:'start'});
-  }
-}
-// Алиас для ссылки «Дашборды» в шапке — использует ту же toggle-логику.
-function showDashboardsOnly(){
-  filterWorks('dashboards',null);
-}
-// Переключение контактных форм. kind — 'tg' | 'mail' | 'call' | 'vk'.
-// Одновременно открыта только одна форма — другие закрываются.
-function toggleContact(kind){
-  const ids={tg:'formTelegram',mail:'formEmail',call:'formCall',vk:'formVk'};
-  const inputs={tg:'tgMessage',mail:'mailFrom',call:'callPhone',vk:'vkMessage'};
-  const target=document.getElementById(ids[kind]);
-  if(!target)return false;
-  const wasOpen=target.classList.contains('show');
-  // закрываем все формы
-  Object.values(ids).forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('show');});
-  // если форма не была открыта — открываем и фокусируем поле
-  if(!wasOpen){
-    target.classList.add('show');
-    setTimeout(()=>{const el=document.getElementById(inputs[kind]);if(el)el.focus();},50);
-  }
-  return false;
-}
-// Универсальная отправка формы через PHP → Telegram
-function sendToTelegram(form, payload, statusEl){
-  const btn = form.querySelector('button[type="submit"]');
-  const orig = btn.textContent;
-  btn.disabled = true;
-  btn.textContent = 'Отправляю...';
-  if(statusEl){ statusEl.textContent=''; statusEl.className='contact-form-note'; }
-
-  fetch('send.php', {
-    method: 'POST',
-    headers: {'Content-Type':'application/x-www-form-urlencoded'},
-    body: new URLSearchParams(payload).toString()
-  })
-  .then(r=>r.json())
-  .then(data=>{
-    if(data.ok){
-      form.reset();
-      if(statusEl){ statusEl.textContent='✓ Отправлено! Я отвечу в Telegram.'; statusEl.className='contact-form-note ok'; }
-    } else {
-      if(statusEl){ statusEl.textContent='✗ Не отправилось. Напишите мне — ссылка в шапке страницы.'; statusEl.className='contact-form-note err'; }
-    }
-  })
-  .catch(()=>{
-    if(statusEl){ statusEl.textContent='✗ Ошибка сети. Напишите мне — ссылка в шапке страницы.'; statusEl.className='contact-form-note err'; }
-  })
-  .finally(()=>{
-    btn.disabled = false;
-    btn.textContent = orig;
   });
-  return false;
-}
-function submitTelegram(e){
-  e.preventDefault();
-  const form=e.target;
-  const text=document.getElementById('tgMessage').value.trim();
-  if(!text)return false;
-  sendToTelegram(form, {type:'tg', message:text}, form.querySelector('.contact-form-note'));
-  return false;
-}
-function submitVk(e){
-  e.preventDefault();
-  const form=e.target;
-  const text=document.getElementById('vkMessage').value.trim();
-  if(!text)return false;
-  sendToTelegram(form, {type:'vk', message:text}, form.querySelector('.contact-form-note'));
-  return false;
-}
-function submitEmail(e){
-  e.preventDefault();
-  const form=e.target;
-  const from=document.getElementById('mailFrom').value.trim();
-  const task=document.getElementById('mailTask').value.trim();
-  if(!from)return false;
-  sendToTelegram(form, {type:'mail', email:from, task:task}, form.querySelector('.contact-form-note'));
-  return false;
-}
-function submitCall(e){
-  e.preventDefault();
-  const form=e.target;
-  const phone=document.getElementById('callPhone').value.trim();
-  if(!phone)return false;
-  sendToTelegram(form, {type:'call', phone:phone}, form.querySelector('.contact-form-note'));
-  return false;
-}
-function toggleTheme(){
-  const h=document.documentElement;
-  const cur=h.getAttribute('data-theme');
-  const next=cur==='dark'?'light':'dark';
-  h.setAttribute('data-theme',next);
-  document.getElementById('themeIcon').textContent=next==='dark'?'☀️':'🌙';
-  document.getElementById('themeText').textContent=next==='dark'?'Светлая':'Тёмная';
-  try{localStorage.setItem('portfolio-theme',next)}catch(e){}
-}
-(function(){
-  try{const t=localStorage.getItem('portfolio-theme');if(t){document.documentElement.setAttribute('data-theme',t);document.getElementById('themeIcon').textContent=t==='dark'?'☀️':'🌙';document.getElementById('themeText').textContent=t==='dark'?'Светлая':'Тёмная';}}catch(e){}
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
-  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+
+  lightbox.addEventListener("click", function () {
+    lightbox.classList.remove("open");
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") lightbox.classList.remove("open");
+  });
+})();
+</script>
+
+<script>
+// после конца ролика плеер возвращается к заставке
+(function () {
+  const video = document.querySelector("#video video");
+  if (video) video.addEventListener("ended", function () { video.load(); });
 })();
 </script>
 </body>
