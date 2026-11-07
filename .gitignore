@@ -16,6 +16,17 @@
 # Логи
 *.log
 
+# Локальные рабочие материалы (не для GitHub)
+__pycache__/
+backup-*/
+index-backup-pre-upgrade.html
+index-vitrina-draft.html
+опубликовать.py
+ВЫКЛАДКА-*.md
+ПРОМПТ-*.md
+сценарий-видео-*.md
+отчеты/
+
 # Временные файлы редакторов
 *~
 *.swp

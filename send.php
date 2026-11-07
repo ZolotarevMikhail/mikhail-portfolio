@@ -12,8 +12,15 @@ if (!file_exists($env_path)) {
     echo json_encode(['ok' => false, 'error' => 'Сервер не настроен (.env отсутствует)']);
     exit;
 }
-foreach (file($env_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
-    if (str_starts_with($line, '#') || !str_contains($line, '=')) continue;
+$raw_lines = @file($env_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+if (!is_array($raw_lines)) {
+    http_response_code(500);
+    echo json_encode(['ok' => false, 'error' => 'Не удалось прочитать .env — проверь права доступа файла (нужны 644)']);
+    exit;
+}
+foreach ($raw_lines as $line) {
+    // Совместимо с PHP 7.x (str_starts_with появился только в PHP 8)
+    if ($line === '' || $line[0] === '#' || strpos($line, '=') === false) continue;
     [$k, $v] = explode('=', $line, 2);
     $_ENV[trim($k)] = trim($v);
 }
@@ -24,11 +31,13 @@ $VK_TOKEN     = $_ENV['VK_TOKEN']     ?? '';
 $VK_USER_ID   = $_ENV['VK_USER_ID']   ?? '';
 $VK_API_V     = $_ENV['VK_API_V']     ?? '5.199';
 
-if ($TG_BOT_TOKEN === '' || $TG_CHAT_ID === '' || $VK_TOKEN === '' || $VK_USER_ID === '') {
+// Telegram обязателен, ВКонтакте — опционален (пишем в ВК только если токен задан)
+if ($TG_BOT_TOKEN === '' || $TG_CHAT_ID === '') {
     http_response_code(500);
-    echo json_encode(['ok' => false, 'error' => 'Не все секреты заданы в .env']);
+    echo json_encode(['ok' => false, 'error' => 'Не заданы TG_BOT_TOKEN и TG_CHAT_ID в .env']);
     exit;
 }
+$vk_enabled = ($VK_TOKEN !== '' && $VK_USER_ID !== '');
 // ===================================
 
 header('Content-Type: application/json; charset=utf-8');
@@ -129,6 +138,8 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, [
 ]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4); // у VPS нет IPv6 — иначе зависает на AAAA-адресе
+curl_setopt($ch, CURLOPT_PROXY, 'socks5h://127.0.0.1:10808'); // Telegram из РФ дозванивается только через запасной выход
 $tg_result = curl_exec($ch);
 $tg_code   = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
@@ -143,31 +154,34 @@ if ($tg_code === 200) {
     $errors[] = "TG: HTTP $tg_code";
 }
 
-// === ВКонтакте ===
-$vk_url = 'https://api.vk.com/method/messages.send';
-$ch = curl_init($vk_url);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
-    'user_id'      => $VK_USER_ID,
-    'message'      => $text,
-    'random_id'    => rand(1, 999999999),
-    'access_token' => $VK_TOKEN,
-    'v'            => $VK_API_V,
-]));
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-$vk_result = curl_exec($ch);
-$vk_code   = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-curl_close($ch);
-if ($vk_code === 200) {
-    $decoded = json_decode($vk_result, true);
-    if (!isset($decoded['error']) && isset($decoded['response'])) {
-        $results['vk'] = true;
+// === ВКонтакте (только если токен задан) ===
+if ($vk_enabled) {
+    $vk_url = 'https://api.vk.com/method/messages.send';
+    $ch = curl_init($vk_url);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+        'user_id'      => $VK_USER_ID,
+        'message'      => $text,
+        'random_id'    => rand(1, 999999999),
+        'access_token' => $VK_TOKEN,
+        'v'            => $VK_API_V,
+    ]));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4); // у VPS нет IPv6
+    $vk_result = curl_exec($ch);
+    $vk_code   = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    if ($vk_code === 200) {
+        $decoded = json_decode($vk_result, true);
+        if (!isset($decoded['error']) && isset($decoded['response'])) {
+            $results['vk'] = true;
+        } else {
+            $errors[] = 'VK: ' . ($decoded['error']['error_msg'] ?? 'unknown');
+        }
     } else {
-        $errors[] = 'VK: ' . ($decoded['error']['error_msg'] ?? 'unknown');
+        $errors[] = "VK: HTTP $vk_code";
     }
-} else {
-    $errors[] = "VK: HTTP $vk_code";
 }
 
 // Логируем неудачи (в error_log на хостинге)

@@ -189,8 +189,8 @@
     <article class="case fade" data-theme="dashboards" id="case-wb">
       <div class="case-head">
         <div>
-          <div class="case-num">КЕЙС 07 · АНАЛИТИКА</div>
-          <h3>Дашборд продаж Wildberries</h3>
+          <div class="case-num">КЕЙС 07 · АНАЛИТИКА · КОМПЛЕКС</div>
+          <h3>Автоматический Дашборд + Радар — комплексный дашборд продаж (Wildberries)</h3>
         </div>
         <div class="tags"><span>HTML/CSS/JS</span><span>WB API</span><span>Без CDN</span><span>Свет/тьма</span></div>
       </div>
@@ -201,9 +201,10 @@
         <div class="case-row"><div class="lbl">Что сделал</div><div class="val"><b>6 KPI-плиток</b>: выручка (с возвратами), заказы, прибыль, ROI рекламы, остатки, возвраты. <b>4 графика</b>: динамика выручки/заказов/прибыли по периоду, расходы и отдача на рекламу, прибыль по товарам (рейтинг «кто зарабатывает — кто тянет вниз»), остатки по товарам. <b>Фильтры</b>: период (год/месяц/неделя/день + произвольные даты), тип товара. Одна кнопка <b>«Обновить»</b> — тянет свежие данные из API WB по требованию. <b>Экспорт в CSV</b> текущего среза. <b>Светлая и тёмная тема</b>. Авто-резюме по периоду. Таблица товаров с сортировкой.</div></div>
         <div class="case-row"><div class="lbl">Результат</div><div class="val">Один HTML-файл, открывается двойным кликом. <b>Работает офлайн</b>, без CDN и внешних библиотек — графики на чистом SVG/JS. <b>Демо-данные</b> внутри файла: дашборд сразу показывает графики и KPI без настройки — можно оценить интерфейс. WB-токен хранится только в local браузера клиента, никогда не уходит в код. Готов к подключению реального кабинета селлера (режим «лайв-браузер»).</div></div>
         <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), HTML/CSS/JS, API Wildberries (продажи, заказы, остатки, комиссии, реклама), SVG-графики. Архитектура применима и к Ozon — для другой структуры комиссий и остатков.</div></div>
+        <div class="case-row"><div class="lbl">Дальше</div><div class="val">Проект вырос в комплекс <b>«Автоматический Дашборд + Радар»</b>: вкладка «Радар цен» (пары «товар × конкурент» с Δ% и авто-выводами), ежедневная выгрузка продаж по API и автоматический сбор цен конкурентов с открытой витрины по расписанию. <a href="https://zolotarevmikhail.github.io/dashboard-plus-radar/" target="_blank" rel="noopener">Демо комплекса онлайн</a>, <a href="https://github.com/ZolotarevMikhail/dashboard-plus-radar" target="_blank" rel="noopener">код открыт</a>.</div></div>
       </div>
       <div style="padding:0 24px 20px">
-        <a class="btn btn-primary" href="/wb-dashboard.html" target="_blank" rel="noopener">Открыть демо</a>
+        <a class="btn btn-primary" href="https://zolotarevmikhail.github.io/dashboard-plus-radar/" target="_blank" rel="noopener">Демо комплекса</a>
       </div>
     </article>
 
@@ -212,7 +213,7 @@
       <div class="case-head">
         <div>
           <div class="case-num">КЕЙС 08 · WB/OZON</div>
-          <h3>Seller Price Radar — цены конкурентов на Wildberries</h3>
+          <h3>Радар цен конкурентов — вкладка комплекса (Wildberries)</h3>
         </div>
         <div class="tags"><span>HTML/CSS/JS</span><span>Адаптив</span><span>Демо онлайн</span></div>
       </div>
@@ -222,10 +223,11 @@
         <div class="case-row"><div class="lbl">Задача</div><div class="val">Селлеру WB нужно видеть, где его цена ниже конкурента, а где конкурент обходит его — по парам товаров-аналогов, а не «в среднем по полке».</div></div>
         <div class="case-row"><div class="lbl">Что сделал</div><div class="val">Дашборд одним HTML-файлом: <b>сопоставление пар</b> с цветовой маркировкой (🟢 мы дешевле / 🔴 конкурент дешевле), живые фильтры (товар, конкурент, порог %), <b>авто-выводы</b> по критичным расхождениям, загрузка среза JSON/CSV, средняя по конкурентам. Без библиотек и CDN, адаптив от 400 px.</div></div>
         <div class="case-row"><div class="lbl">Результат</div><div class="val">Открывается двойным кликом и сразу показывает демо-данные. <b>Демо доступно онлайн</b> — можно показать заказчику без установки.</div></div>
-        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), чистый JavaScript, SVG, GitHub Pages для демо.</div></div>
+        <div class="case-row"><div class="lbl">Инструменты</div><div class="val">Claude (вайбкодинг), чистый JavaScript, SVG, GitHub Pages для демо. В комплексе радар живёт на вкладке большого дашборда; здесь — самостоятельное демо радара.</div></div>
       </div>
       <div style="padding:0 24px 20px">
-        <a class="btn btn-primary" href="https://zolotarevmikhail.github.io/seller-price-radar-mvp/" target="_blank" rel="noopener">Открыть демо</a>
+        <a class="btn btn-primary" href="https://zolotarevmikhail.github.io/seller-price-radar-mvp/" target="_blank" rel="noopener">Демо радара</a>
+        <a class="btn btn-primary" href="https://zolotarevmikhail.github.io/dashboard-plus-radar/" target="_blank" rel="noopener">Демо комплекса</a>
       </div>
     </article>
 
@@ -607,6 +609,7 @@
           <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
           <textarea id="tgMessage" rows="4" placeholder="Здравствуйте! Хочу обсудить задачу..." class="contact-input contact-textarea" required></textarea>
           <button type="submit" class="contact-submit">Отправить</button>
+          <p class="consent-n">Нажимая «Отправить», согласен на обработку данных из формы. <a href="privacy.html">Политика</a>.</p>
         </form>
       </div>
 
@@ -617,6 +620,7 @@
           <input type="email" id="mailFrom" required placeholder="ваш@email.com" autocomplete="email" class="contact-input">
           <textarea id="mailTask" rows="3" placeholder="Коротко о задаче (необязательно)" class="contact-input contact-textarea"></textarea>
           <button type="submit" class="contact-submit">Отправить</button>
+          <p class="consent-n">Нажимая «Отправить», согласен на обработку данных из формы. <a href="privacy.html">Политика</a>.</p>
         </form>
       </div>
 
@@ -626,6 +630,7 @@
           <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
           <textarea id="vkMessage" rows="4" placeholder="Здравствуйте! Хочу обсудить задачу..." class="contact-input contact-textarea" required></textarea>
           <button type="submit" class="contact-submit">Отправить</button>
+          <p class="consent-n">Нажимая «Отправить», согласен на обработку данных из формы. <a href="privacy.html">Политика</a>.</p>
         </form>
       </div>
 
@@ -635,6 +640,7 @@
           <input type="text" name="hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
           <input type="tel" id="callPhone" required placeholder="+7 (___) ___-__-__" pattern="[\+\d\s\-\(\)]{6,}" autocomplete="tel" class="contact-input">
           <button type="submit" class="contact-submit">Отправить</button>
+          <p class="consent-n">Нажимая «Отправить», согласен на обработку данных из формы. <a href="privacy.html">Политика</a>.</p>
         </form>
       </div>
     </div>
